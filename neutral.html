@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neutral Emotion Page</title>
+    <!-- Bootstrap CSS for quick layout -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Background with a neutral gradient */
+        body {
+            background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+            color: #333;
+            font-family: Arial, sans-serif;
+        }
+
+        h2 {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 2.5rem;
+        }
+
+        .section {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 60px;
+        }
+
+        /* Make iframes square */
+        iframe {
+            width: 250px;
+            height: 250px;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .carousel-control-prev, .carousel-control-next {
+            color: #333;
+        }
+
+        .open-new-tab {
+            display: inline-block;
+            margin-top: 10px;
+            text-decoration: underline;
+            color: #007bff;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .carousel-item {
+            text-align: center;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Feeling Nothing? Here's Some Content for You!</h2>
+
+        <!-- Songs Section -->
+        <div class="section">
+            <h3>Songs</h3>
+            <div id="songCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <!-- Song 1 with iframe -->
+                    <div class="carousel-item active">
+                        <iframe scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/237408858&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+                        <a class="open-new-tab" href="https://soundcloud.com/aryraser/barbie-girl" target="_blank">Open in new tab</a>
+                        <p>Song 1: Happy Happy Happy</p>
+                    </div>
+                    <!-- Add more song items -->
+                    <div class="carousel-item">
+                        <iframe scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/308222177&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+                        <a class="open-new-tab" href="https://soundcloud.com/rubygmusic/tell-me" target="_blank">Open in new tab</a>
+                        <p>Song 2: Tell Me</p>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#songCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#songCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Videos Section -->
+        <div class="section">
+            <h3>Videos</h3>
+            <div id="videoCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <iframe src="https://www.youtube.com/embed/UXDSeD9mN-k?si=yZhmgqtKZODs-smd" title="Video 1"></iframe>
+                        <a class="open-new-tab" href="https://www.youtube.com/watch?v=UXDSeD9mN-k" target="_blank">Open in new tab</a>
+                        <p>Video 1: One Million Dance Studio</p>
+                    </div>
+                    <!-- Add more video items -->
+                    <div class="carousel-item">
+                        <iframe src="https://www.youtube.com/embed/2Vv-BfVoq4g?si=yZhmgqtKZODs-smd" title="Video 2"></iframe>
+                        <a class="open-new-tab" href="https://www.youtube.com/watch?v=2Vv-BfVoq4g" target="_blank">Open in new tab</a>
+                        <p>Video 2: Perfect - Ed Sheeran</p>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#videoCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#videoCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+
+        !-- Podcasts Section -->
+        <div class="section">
+            <h3>Podcasts</h3>
+            <div id="podcastCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <iframe scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/858336598&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+                        <a class="open-new-tab" href="https://soundcloud.com/user-3302079/yoga-with-angela-wilson-15-minutes-of-happy-episode-8" target="_blank">Open in new tab</a>
+                        <p>Podcast 1: The Official Podcast - Episode 200</p>
+                    </div>
+
+
+                    <!-- Add more podcast items -->
+                    <div class="carousel-item">
+                        <iframe scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/688242401&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+                        <a class="open-new-tab" href="https://soundcloud.com/freakonomics/the-freakonomics-radio-book" target="_blank">Open in new tab</a>
+                        <p>Podcast 2: Freakonomics Radio - The Future of Work</p>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#podcastCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#podcastCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- E-books Section -->
+        <div class="section">
+            <h3>E-Books</h3>
+            <div id="ebookCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <!-- E-book 1 -->
+                    <div class="carousel-item active">
+                        <iframe src="https://archive.org/embed/adventureofsherl0000unse" title="E-book 2"></iframe>
+                        <p>E-Book 1: The Rainbow Fish</p>
+                        <a class="open-new-tab" href="https://archive.org/embed/adventureofsherl0000unse" target="_blank">Open in new tab</a>
+                        <a href="https://archive.org/embed/adventureofsherl0000unse" download class="btn btn-primary mt-2">Download E-book</a>
+                    </div>
+                    
+                    <!-- E-book 2 -->
+                    <div class="carousel-item">
+                        <iframe src="https://drive.google.com/file/d/1iUNx7fjV2FXpJgHjwa/view?usp=sharing" title="E-book 2"></iframe>
+                        <p>E-Book 2: The Happiness Project</p>
+                        <a class="open-new-tab" href="https://drive.google.com/file/d/1iUNx7fjV2FXpJgHjwa/view?usp=sharing" target="_blank">Open in new tab</a>
+                        <a href="https://drive.google.com/uc?export=download&id=1iUNx7fjV2FXpJgHjwa" download class="btn btn-primary mt-2">Download E-book</a>
+                    </div>
+
+                    <!-- Add more e-book items here -->
+                </div>
+                
+                <!-- Carousel navigation controls -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#ebookCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#ebookCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
