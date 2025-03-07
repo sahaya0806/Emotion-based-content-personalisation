@@ -6,67 +6,240 @@
     <title>Neutral Emotion Page</title>
     <!-- Bootstrap CSS for quick layout -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        /* Background with a neutral gradient */
+        /* Enhanced styling with Ennui theme */
         body {
             background: linear-gradient(135deg, #27074e 0%, #090907 100%);
-            color: #090909;
-            font-family: 'Raleway', sans-serif;
+            color: #f0f0f0;
+            font-family: 'Quicksand', sans-serif;
+            overflow-x: hidden;
         }
+
 
         h2 {
             text-align: center;
-            margin-top: 20px;
+            margin-top: 30px;
+            margin-bottom: 30px;
             font-size: 2.5rem;
+            color: #e1e1e1;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            animation: bounce 2s infinite; /* Applying bounce animation */
+            position: relative;
+            
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0); /* No movement at start, middle, and end */
+    }
+            40% {
+                transform: translateY(-30px); /* Bounces up */
+    }
+            60% {
+                transform: translateY(-15px); /* Bounces down a little */
+    }
+}
+        h3 {
+            font-weight: 600;
+            color: #faf9f6;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #6B728E;
+            padding-bottom: 10px;
+            animation: fadeIn 1s ease-in;
+        }
+
+        h4 {
+            font-weight: 400;
+            color: #e1e1e1;
+            font-style: italic;
+            margin-bottom: 25px;
+            animation: slideIn 1.2s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            from { transform: translateX(-20px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
         }
 
         .section {
-            background-color:rgba(54, 44, 59, 0.406);
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(8, 8, 8, 0.1);
-            padding: 20px;
+            background: linear-gradient(135deg, #27074e 0%, #090907 100%);
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            padding: 30px;
             margin-bottom: 60px;
-            color:rgb(148, 111, 141);
+            color: #f0f0f0;
+            backdrop-filter: blur(5px);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
         }
 
-        /* Make iframes square */
+        .section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Ennui character silhouette in the background of each section */
+        .section::before {
+            content: '';
+            position: absolute;
+            right: -50px;
+            bottom: -50px;
+            width: 300px;
+            height: 400px;
+            background-image: url('https://images.hdqwalls.com/download/ennui-in-inside-out-2-movie-2024-lp-3000x2000.jpg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            opacity: 0.50;
+            transform: rotate(10deg);
+            z-index: 0;
+        }
+
+        /* Make iframes rounded and with shadow */
         iframe {
             width: 550px;
             height: 250px;
             display: block;
             margin: 0 auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        iframe:hover {
+            transform: scale(1.02);
         }
 
         .carousel-control-prev, .carousel-control-next {
-            color: #080808;
+            width: 10%;
+            opacity: 0.7;
+        }
+
+        .carousel-control-prev-icon, .carousel-control-next-icon {
+            background-color: rgba(107, 114, 142, 0.7);
+            border-radius: 50%;
+            padding: 25px;
         }
 
         .open-new-tab {
             display: inline-block;
-            margin-top: 10px;
-            text-decoration: underline;
-            color: #007bff;
-            text-align: center;
-            cursor: pointer;
+            margin-top: 15px;
+            color: #c3c8e3;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+            padding: 5px 10px;
+        }
+
+        .open-new-tab:hover {
+            color: #ffffff;
+        }
+
+        .open-new-tab::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #ffffff;
+            transition: width 0.3s ease;
+        }
+
+        .open-new-tab:hover::after {
+            width: 100%;
         }
 
         .carousel-item {
             text-align: center;
-            color: white;
+            padding: 20px 0;
+        }
+
+        .carousel-item p {
+            margin-top: 15px;
+            font-weight: 500;
+            color: #e1e1e1;
         }
 
         .btn {
             display: inline-block;
-            margin-top: 10px;
+            margin-top: 15px;
+            background-color: #6B728E;
+            border: none;
+            border-radius: 25px;
+            padding: 8px 20px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn:hover {
+            background-color: #50577A;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Container with animated glow effect */
+        .container {
+            position: relative;
+            padding: 20px;
+            margin-top: 20px;
+            margin-bottom: 50px;
+        }
+
+        .container::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 20px;
+            box-shadow: 0 0 30px 10px rgba(107, 114, 142, 0.3);
+            animation: glow 4s infinite alternate;
+            z-index: -1;
+        }
+
+        @keyframes glow {
+            0% { box-shadow: 0 0 30px 10px rgba(107, 114, 142, 0.3); }
+            100% { box-shadow: 0 0 30px 10px rgba(80, 87, 122, 0.6); }
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 12px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #404258;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #6B728E;
+            border-radius: 6px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #50577A;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h2><b>"Not too high, not too low? Perfect! Let’s chill with some calm yet engaging content just for you."</b></h2>
+        <h2><b>"Not too high, not too low? Perfect! Let's chill with some calm yet engaging content just for you."</b></h2>
 
         <!-- Songs Section -->
         <div class="section">
+            
             <h3>Songs</h3>
             <h4>"Feeling that neutral vibe? How about some tunes that flow with your mood—nothing too loud, nothing too soft, just the right rhythm for your middle ground..!"</h4>
             <div id="songCarousel" class="carousel slide" data-bs-ride="carousel">
@@ -136,40 +309,42 @@
 
         <!-- Videos Section -->
         <div class="section">
+            
+
             <h3>Videos</h3>
-            <h4>"In the mood for something that’s neither too dramatic nor too dull? We’ve got videos that ride the perfect wave between boredom and excitement—just for you!"</h4>
+            <h4>"In the mood for something that's neither too dramatic nor too dull? We've got videos that ride the perfect wave between boredom and excitement—just for you!"</h4>
             <div id="videoCarousel" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <iframe src="https://www.youtube.com/embed/C6C0JsWgT4Y?si=e7LqVDSeEnWO4zRO" title="YouTube video player" title="Video 1"></iframe>
                         <a class="open-new-tab" href="https://youtu.be/C6C0JsWgT4Y?si=OdvF68axLTGYDOfC" target="_blank">Open in new tab</a>
-                        <p>Video 1: Learn English with Comedians</p>
+                        <p>Video 1: LEARN ENGLISH WITH CONFIDENCE</p>
                     </div>
                     <!-- Add more video items -->
                     <div class="carousel-item">
                         <iframe src="https://www.youtube.com/embed/6rs-NTpfDJg?si=cRe_RFXblPkIDywN"  title="Video 2"></iframe>
                         <a class="open-new-tab" href="https://youtu.be/6rs-NTpfDJg?si=oiqT55ZJAd279do8" target="_blank">Open in new tab</a>
-                        <p>Video 2: Panchathanthiram</p>
+                        <p>Video 2: PANCHATHANTHIRAM</p>
                     </div>
                     <div class="carousel-item">
                         <iframe src="https://www.youtube.com/embed/rD4e1k4wRRI?si=y_ir0Weh4SG6wmG7"  title="Video 2"></iframe>
                         <a class="open-new-tab" href="https://youtu.be/rD4e1k4wRRI?si=d-M1rC5wKRpz0Tkd" target="_blank">Open in new tab</a>
-                        <p>Video 3: English Is the Weirdest Language </p>
+                        <p>Video 3: ENGLISH IS THE WEIRDEST LANGUAGE </p>
                     </div>
                     <div class="carousel-item">
                         <iframe src="https://www.youtube.com/embed/fQL4n2jiYkY?si=Ou-Zp-PeUOVuBMe0"  title="Video 2"></iframe>
                         <a class="open-new-tab" href="https://youtu.be/fQL4n2jiYkY?si=zhucLFmVObwzkp8r" target="_blank">Open in new tab</a>
-                        <p>Video 4: Talking to Yourself</p>
+                        <p>Video 4: TALKING TO YOURSELF</p>
                     </div>
                     <div class="carousel-item">
                         <iframe src="https://www.youtube.com/embed/WeKnGn_UcnA?si=OxlcbUaCduvCQfQW"  title="Video 2"></iframe>
                         <a class="open-new-tab" href="https://youtu.be/WeKnGn_UcnA?si=xo6zg6v0eYZuh98d" target="_blank">Open in new tab</a>
-                        <p>Video 5: LEVIATHAN wakes up , A snake mystery</p>
+                        <p>Video 5: LEVIATHAN WAKES UP , A SNAKE MYSTERY</p>
                     </div>
                     <div class="carousel-item">
                         <iframe src="https://www.youtube.com/embed/0HoSwHNUOHg?si=vEMbHD2KgAdWMOEL"  title="Video 2"></iframe>
                         <a class="open-new-tab" href="https://youtu.be/0HoSwHNUOHg?si=hAqbpfqQpfkXWOag" target="_blank">Open in new tab</a>
-                        <p>Video 6: Interviewing Sophia- Worlds First Humanoid Robot</p>
+                        <p>Video 6: INTERVIEWING SOPHIA - WORLDS FIRST HUMANOID ROBOT</p>
                     </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#videoCarousel" data-bs-slide="prev">
@@ -185,6 +360,8 @@
 
         <!-- Podcasts Section -->
         <div class="section">
+            
+
             <h3>Podcasts</h3>
             <h4>"Need something to tune into without tipping the emotional scales? These podcasts offer the right balance of thought-provoking and laid-back—ideal for your neutral mood."</h4>
             <div id="podcastCarousel" class="carousel slide" data-bs-ride="carousel">
@@ -192,7 +369,7 @@
                     <div class="carousel-item active">
                         <iframe src="https://www.youtube.com/embed/M7fpQhFeJv8?si=rnfQc3hAozQCQZ3C"></iframe>
                         <a class="open-new-tab" href="https://youtu.be/M7fpQhFeJv8?si=FOsHXn_e49IVO55d" target="_blank">Open in new tab</a>
-                        <p>How do we stop Overthinking</p>
+                        <p>HOW DO WE STOP OVERTHINKING</p>
                     </div>
 
 
@@ -200,17 +377,17 @@
                     <div class="carousel-item">
                         <iframe src="https://www.youtube.com/embed/rKpltaOMFdc?si=RcdsNmVSCMiID8bW"></iframe>
                         <a class="open-new-tab" href="https://youtu.be/rKpltaOMFdc?si=M74NLhUSnWB3_3H4" target="_blank">Open in new tab</a>
-                        <p>Confidence Isn't Loud , here's how to find your voice</p>
+                        <p>CONFIDENCE ISNT LOUD , HERE'S HOW TO FIND YOUR VOICE</p>
                     </div>
                     <div class="carousel-item">
                         <iframe src="https://www.youtube.com/embed/NcaQUH2K-wo?si=QgGgs2fZUuAwM7za"></iframe>
                         <a class="open-new-tab" href="https://youtu.be/NcaQUH2K-wo?si=-fScFdzT8I8BsueJ" target="_blank">Open in new tab</a>
-                        <p>The problem with Gen-z</p>
+                        <p>THE PROBLEM WITH GEN-Z</p>
                     </div>
                     <div class="carousel-item">
                         <iframe src="https://www.youtube.com/embed/0SPC_Q7-k40?si=Ji9nRG_ZC0Ba77RQ"></iframe>
                         <a class="open-new-tab" href="https://youtu.be/0SPC_Q7-k40?si=qx3vHXW5EMzfvdh1" target="_blank">Open in new tab</a>
-                        <p>You can change your brain</p>
+                        <p>YOU CAN CHANGE YOUR BRAIN</p>
                     </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#podcastCarousel" data-bs-slide="prev">
@@ -226,14 +403,16 @@
 
         <!-- E-books Section -->
         <div class="section">
+            
+
             <h3>E-Books</h3>
-            <h4>"Neutral moods call for quiet exploration. Grab an e-book that doesn’t push any buttons but keeps you hooked in a steady, thoughtful flow."</h4>
+            <h4>"Neutral moods call for quiet exploration. Grab an e-book that doesn't push any buttons but keeps you hooked in a steady, thoughtful flow."</h4>
             <div id="ebookCarousel" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <!-- E-book 1 -->
                     <div class="carousel-item active">
                         <iframe src="https://archive.org/embed/adventureofsherl0000unse" title="E-book 2"></iframe>
-                        <p>E-Book 1: The Adventures Of Sherlock Holmes</p>
+                        <p>E-Book 1: THE ADVENTURES OF SHERLOCK HOLMES</p>
                         <a class="open-new-tab" href="https://archive.org/embed/adventureofsherl0000unse" target="_blank">Open in new tab</a>
                         <a href="https://archive.org/embed/adventureofsherl0000unse" download class="btn btn-primary mt-2">Download E-book</a>
                     </div>
@@ -241,13 +420,13 @@
                     <!-- E-book 2 -->
                     <div class="carousel-item">
                         <iframe src="https://archive.org/embed/autobiographyofb0000fran_s6g2" title="E-book 2"></iframe>
-                        <p>E-Book 2: The Autobiography of Benjamin Fraklin</p>
+                        <p>E-Book 2: THE AUTOBIOGRAPHY OF BENJAMIN FRANKLIN</p>
                         <a class="open-new-tab" href="https://archive.org/embed/autobiographyofb0000fran_s6g2" target="_blank">Open in new tab</a>
                         <a href="https://drive.google.com/uc?export=download&id=1iUNx7fjV2FXpJgHjwa" download class="btn btn-primary mt-2">Download E-book</a>
                     </div>
                     <div class="carousel-item">
                         <iframe src="https://archive.org/embed/responsibilities00yeatiala" title="E-book 2"></iframe>
-                        <p>E-Book 3: Responsiblities</p>
+                        <p>E-Book 3: RESPONSIBLITIES</p>
                         <a class="open-new-tab" href="https://archive.org/embed/responsibilities00yeatiala" target="_blank">Open in new tab</a>
                         <a href="https://drive.google.com/uc?export=download&id=1iUNx7fjV2FXpJgHjwa" download class="btn btn-primary mt-2">Download E-book</a>
                     </div>
@@ -283,5 +462,24 @@
     <!-- Bootstrap JS and dependencies -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+    <script>
+        // Add animation classes on scroll
+        document.addEventListener('DOMContentLoaded', function() {
+            // Delay the appearance of each section
+            const sections = document.querySelectorAll('.section');
+            sections.forEach((section, index) => {
+                section.style.opacity = '0';
+                section.style.transform = 'translateY(20px)';
+                section.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                
+                setTimeout(() => {
+                    section.style.opacity = '1';
+                    section.style.transform = 'translateY(0)';
+                }, 300 * (index + 1));
+            });
+        });
+    </script>
+    
+    <!-- Additional JavaScript for animations -->
 </body>
 </html>
