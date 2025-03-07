@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calm Your Mind - Let Anger Fade Away</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        body {
+            background: linear-gradient(135deg, #8B0000, #FF4500, #FF6347);
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: bold;
+            animation: bounceText 2s infinite alternate;
+            background: linear-gradient(45deg, #d88e18, #99ea0c);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        @keyframes bounceText {
+            0% { transform: translateY(0px); }
+            100% { transform: translateY(-10px); }
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            animation: fadeIn 3s ease-in-out;
+        }
+
+        .btn-start {
+            background: #FFD700;
+            color: #8B0000;
+            padding: 12px 24px;
+            font-size: 1.5rem;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .btn-start:hover {
+            transform: scale(1.1);
+            background: #fff;
+            color: #8B0000;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            max-width: 1200px;
+            margin: 50px auto;
+            gap: 40px;
+        }
+
+        .content-box {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            gap: 20px;
+        }
+
+        .section {
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            padding: 20px;
+            width: 70%;
+            min-height: 350px;
+            color: #fff;
+            transition: transform 0.3s ease-in-out;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .image-box {
+            width: 10%;
+        }
+
+        .image-box img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .image-box img:hover {
+            transform: scale(1.1);
+        }
+
+        .section:hover {
+            transform: scale(1.05);
+        }
+
+        .quote {
+            font-style: italic;
+            font-size: 1.2rem;
+            color: #FFD700;
+            margin-bottom: 15px;
+        }
+
+        iframe {
+            width: 100%;
+            height: 250px;
+            border-radius: 10px;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <h1>Calm Your Mind - Let Anger Fade Away</h1>
+        <p>"Holding onto anger is like drinking poison and expecting the other person to die."</p>
+        <button class="btn-start" onclick="scrollToContent()">Start Healing</button>
+    </div>
+
+    <!-- Songs Section -->
+    <div class="container">
+        <div class="content-box">
+            <div class="image-box">
+                <img src="angryinsideout2 img'.jpg" alt="Relaxing Image">
+            </div>
+            <div class="section">
+                <h3>Songs to Ease Your Anger</h3>
+                <p class="quote">"Music washes away from the soul the dust of everyday life." - Berthold Auerbach</p>
+                <div id="songCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <!-- Song 1 -->
+                        <div class="carousel-item active">
+                            <iframe src="https://www.youtube.com/embed/oLgzs8nut3A?si=wtL4ryAxjr1KjeHd"
+                                title="YouTube video player"></iframe>
+                            <a class="open-new-tab" href="https://youtu.be/oLgzs8nut3A?feature=shared" target="_blank">Open
+                                in new tab</a>
+                            <p>Song 1: Ullaallaa </p>
+                        </div>
+    
+                        <!-- Add 2 song items -->
+                        <div class="carousel-item">
+                            <iframe src="https://www.youtube.com/embed/88iypMO9H7g?si=iVFW3VsOaQGPqSvU"
+                                title="YouTube video player"></iframe>
+                            <a class="open-new-tab" href="https://www.youtube.com/watch?v=SKV1ZRkVNP0" target="_blank">Open
+                                in new tab</a>
+                            <p>Song 2: "Marana Mass" from Petta</p>
+                        </div>
+                        <!-- Add 3 song items -->
+                        <div class="carousel-item">
+                            <iframe src="https://www.youtube.com/embed/UPQZ4vuvW2s?si=8j_v5D2ZkICuELVn" 
+                                title="YouTube video player"></iframe>
+                            <a class="open-new-tab" href="https://youtu.be/UPQZ4vuvW2s?feature=shared" target="_blank">Open
+                                in new tab</a>
+                            <p>Song 3:Munbe Vaa
+                            </p>
+                        </div>
+                        <!-- Add 4 song items -->
+                        <div class="carousel-item">
+                            <iframe src="https://www.youtube.com/embed/3TVvRETczto?si=Rxfe9_FZ_lVdXPwq"
+                                title="YouTube video player"></iframe>
+                            <a class="open-new-tab" href="https://youtu.be/3TVvRETczto?feature=shared" target="_blank">Open
+                                in new tab</a>
+                            <p>Song 4: "Vennilave Vennilave Song" </p>
+                        </div>
+                        <!-- Add 5 song items -->
+                        <div class="carousel-item">
+                            <iframe src="https://www.youtube.com/embed/rZvhOxBWb0E?si=brUr5IV-tY4tjzSI"
+                                title="YouTube video player"></iframe>
+                            <a class="open-new-tab" href="https://youtu.be/rZvhOxBWb0E?feature=shared" target="_blank">Open
+                                in new tab</a>
+                            <p>Song 5: Ennavale Adi Ennavale</p>
+                        </div>
+                        <!-- Add 6 song items -->
+                        <div class="carousel-item">
+                            <iframe src="https://www.youtube.com/embed/nuKXEb-K24Q?si=R94vzJjunDx-0YFh"  
+                                title="YouTube video player"></iframe>
+                            <a class="open-new-tab" href="https://youtu.be/nuKXEb-K24Q?feature=shared" target="_blank">Open
+                                in new tab</a>
+                            <p>Song 6:Pachai Nirame</p>
+                        </div>
+                        <!-- Add 7 song items -->
+                        <div class="carousel-item">
+                            <iframe src="https://www.youtube.com/embed/7wD4H3rghYU?si=499vX0jKLXrl_Mvy" 
+                                title="YouTube video player"></iframe>
+                            <a class="open-new-tab" href="https://youtu.be/7wD4H3rghYU?feature=shared" target="_blank">Open
+                                in new tab</a>
+                            <p>Song 7: Sundari Kannal</p>
+                        </div>
+                        <!-- Add 8 song items -->
+                        <div class="carousel-item">
+                            <iframe src="https://www.youtube.com/embed/zM0KCx9HStk?si=uxt0NHiCJE1cWndG"
+                                title="YouTube video player"></iframe>
+                            <a class="open-new-tab" href="https://youtu.be/zM0KCx9HStk?feature=shared" target="_blank">Open
+                                in new tab</a>
+                            <p>Song 8: Malargale Malargale</p>
+                        </div>
+                        <!-- Add 9 song items -->
+                        <div class="carousel-item">
+                            <iframe src="https://www.youtube.com/embed/x6Q7c9RyMzk?si=HZUZTxR0loQAPDkA"
+                                title="YouTube video player"></iframe>
+                            <a class="open-new-tab" href="https://youtu.be/x6Q7c9RyMzk?feature=shared" target="_blank">Open
+                                in new tab</a>
+                            <p>Song 9: Maari 2 - Rowdy Baby</p>
+                        </div>
+                        <!-- Add 10 song items -->
+                        <div class="carousel-item">
+                            <iframe src="https://www.youtube.com/embed/xSrgt6QG0nE?si=uRC66xlRUr0NZrLd" 
+                                title="YouTube video player"></iframe>
+                            <a class="open-new-tab" href="https://youtu.be/xSrgt6QG0nE?feature=shared" target="_blank">Open
+                                in new tab</a>
+                            <p>Song 10: Velai Illa Pattadhaari</p>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#songCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#songCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+            <div class="image-box">
+                <img src="calm.webp" alt="Calm Image">
+            </div>
+        </div>
+    </div>
+
+    <!-- Videos Section -->
+    <div class="container">
+        <div class="content-box">
+            <div class="image-box">
+                <img src="nature.jpg" alt="Nature Image">
+            </div>
+            <div class="section">
+                <h3>Videos to Uplift Your Mood</h3>
+                <p class="quote">"Laughter is the best medicine for anger." - William James</p>
+                <div id="videoCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <!-- Video 1 -->
+                        <div class="carousel-item active">
+                            <iframe src="https://www.youtube.com/embed/wkse4PPxkk4?si=q3SyDv6JEFsdXE-Z"
+                                title="Video 1"></iframe>
+                            <a class="open-new-tab" href="https://www.youtube.com/watch?v=wkse4PPxkk4" target="_blank">Open in
+                                new tab</a>
+                            <p>Video 1: Video for Anger</p>
+                        </div>
+                        <!-- Add more video items -->
+                        <div class="carousel-item">
+                            <iframe src="https://www.youtube.com/embed/cxoQdEhHaT8?si=gExyrWUgNwamjva-" 
+                                title="Video 2"></iframe>
+                            <a class="open-new-tab" href="https://youtu.be/cxoQdEhHaT8?feature=shared" target="_blank">Open in
+                                new tab</a>
+                            <p>Video 2: Sadhguru on How To Never Get Angry or Bothered By People</p>
+                        </div>
+                         <!-- Add more video items -->
+                         <div class="carousel-item">
+                            <iframe src="https://www.youtube.com/embed/H4WYp9a6Yzg?si=YoNgvtexzy4DVpwT"
+                                title="Video 2"></iframe>
+                            <a class="open-new-tab" href="https://youtu.be/H4WYp9a6Yzg?feature=shared" target="_blank">Open in
+                                new tab</a>
+                            <p>Video 3: 5 Ways to Diffuse Your anger</p>
+                        </div>
+                         <!-- Add more video items -->
+                         <div class="carousel-item">
+                            <iframe src="https://www.youtube.com/embed/nlEoLYREbXo?si=toSn7t3NOMbbo2Y4"
+                                title="Video 2"></iframe>
+                            <a class="open-new-tab" href="https://youtu.be/nlEoLYREbXo?feature=shared" target="_blank">Open in
+                                new tab</a>
+                            <p>Video 4: Clear Your Mind, 5 Minute Meditation, Calm & Relaxed</p>
+                        </div>
+                         <!-- Add more video items -->
+                         <div class="carousel-item">
+                            <iframe src="https://www.youtube.com/embed/QlBxRbQqhbU?si=1ELMmz19kVPIoQki"
+                                title="Video 2"></iframe>
+                            <a class="open-new-tab" href="https://youtu.be/QlBxRbQqhbU?feature=shared" target="_blank">Open in
+                                new tab</a>
+                            <p>Video 5:The Science of Happiness | Kirkland Langberg | TEDxSantaClaraUniversity</p>
+                        </div>
+                         <!-- Add more video items -->
+                         <div class="carousel-item">
+                            <iframe src="https://www.youtube.com/embed/Yh1-y3TzSO4?si=fFmiEC1uVZax4OtM"
+                                title="Video 2"></iframe>
+                            <a class="open-new-tab" href="https://www.youtube.com/watch?v=Yh1-y3TzSO4" target="_blank">Open in
+                                new tab</a>
+                            <p>Video 6: Perfect - Ed Sheeran</p>
+                        </div>
+                         <!-- Add more video items -->
+                         <div class="carousel-item">
+                            <iframe src="https://www.youtube.com/embed/w1V3gZv0ebY?si=9mQOK-5uxDMbVIN4"
+                                title="Video 2"></iframe>
+                            <a class="open-new-tab" href="https://youtu.be/w1V3gZv0ebY?feature=shared" target="_blank">Open in
+                                new tab</a>
+                            <p>Video 7: Gaur Gopal Das: Remove NEGATIVITY From Your MIND and Become UNSTOPPABLE!</p>
+                        </div>
+                         <!-- Add more video items -->
+                         <div class="carousel-item">
+                            <iframe src="https://www.youtube.com/embed/HRE624795zU?si=E1fYLuOXzWfxEqtj"
+                                title="Video 2"></iframe>
+                            <a class="open-new-tab" href="https://youtu.be/HRE624795zU?feature=shared" target="_blank">Open in
+                                new tab</a>
+                            <p>Video 8: How Does Music Affect Your Brain? | Tech Effects | WIRED</p>
+                        </div>
+                         <!-- Add more video items -->
+                         <div class="carousel-item">
+                            <iframe src="https://www.youtube.com/embed/a4bQBXj0a0Y?si=CNVj1lM7WedYjZN0" 
+                                title="Video 2"></iframe>
+                            <a class="open-new-tab" href="https://youtu.be/a4bQBXj0a0Y?feature=shared" target="_blank">Open in
+                                new tab</a>
+                            <p>Video 9: 10 Minute Guided Breathwork For Stress & Anxiety I Feel Calm and Focused</p>
+                        </div>
+                         <!-- Add more video items -->
+                         <div class="carousel-item">
+                            <iframe src="https://www.youtube.com/embed/u_0Aojg_2fs?si=4DV22QM9YZ3nBtkh" 
+                                title="Video 2"></iframe>
+                            <a class="open-new-tab" href="https://www.youtube.com/live/u_0Aojg_2fs?feature=shared" target="_blank">Open in
+                                new tab</a>
+                            <p>Video 10: Mozart Effect Make You Smarter | Classical Music for Brain Power, Studying and Concentration</p>
+                        </div>
+                        
+                        
+        
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#videoCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#videoCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+            <div class="image-box">
+                <img src="Waterfall_at_Arthur's_Pass_National_Park.jpg" alt="Ocean Image">
+            </div>
+        </div>
+    </div>
+
+    <!-- Podcasts Section -->
+    <div class="container">
+        <div class="content-box">
+            <div class="image-box">
+                <img src="redpodcastpng.png" alt="Podcast Image">
+            </div>
+            <div class="section">
+                <h3>Podcasts to Soothe Your Mind</h3>
+                <p class="quote">"Words have power. Let them heal you."</p>
+                <div id="podcastCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <!-- Podcast 1 -->
+                        <div class="carousel-item active">
+                            <iframe src="https://www.youtube.com/embed/J8LMUkuxkbU?si=F2R9aEYMhY1Gre0q"></iframe>
+                            <a class="open-new-tab" href="https://www.youtube.com/watch?v=J8LMUkuxkbU" target="_blank">Open in
+                                new tab</a>
+                            <p>Podcast 1: Anger issue Podcast</p>
+                        </div>
+        
+        
+                        <!-- Add more podcast items -->
+                        <div class="carousel-item">
+                            <iframe src="https://www.youtube.com/embed/UbcVbb0MvkQ?si=HKy6ejYegzPpOqPo"></iframe>
+                            <a class="open-new-tab" href="https://www.youtube.com/watch?v=UbcVbb0MvkQ" target="_blank">Open in
+                                new tab</a>
+                            <p>Podcast 2: Rj Ananthi Podcast</p>
+                        </div>
+                        <!-- Add more podcast items -->
+                        <div class="carousel-item">
+                            <iframe src="https://www.youtube.com/embed/rOXK8K9O_dQ?si=c5HFStuy0Rt4PxtF"></iframe>
+                            <a class="open-new-tab" href="https://youtu.be/rOXK8K9O_dQ?feature=shared" target="_blank">Open in
+                                new tab</a>
+                            <p>Podcast 3: Dr.Laurie Santos Podcast</p>
+                        </div>
+                        <!-- Add more podcast items -->
+                        <div class="carousel-item">
+                            <iframe src="https://www.youtube.com/embed/gHHTeycXcFg?si=qcTeJD5lS22rdqVs" ></iframe>
+                            <a class="open-new-tab" href="https://youtu.be/gHHTeycXcFg?feature=shared" target="_blank">Open in
+                                new tab</a>
+                            <p>Podcast 4: Jay Shetty Podcast</p>
+                        </div>
+                        <!-- Add more podcast items -->
+                        <div class="carousel-item">
+                            <iframe src="https://www.youtube.com/embed/wTBSGgbIvsY?si=d7wBcIfws8gr6Y9k"></iframe>
+                            <a class="open-new-tab" href="https://youtu.be/wTBSGgbIvsY?feature=shared" target="_blank">Open in
+                                new tab</a>
+                            <p>Podcast 5:  Huberman Lab Podcast</p>
+                        </div>
+                        <!-- Add more podcast items -->
+                        <div class="carousel-item">
+                            <iframe src="https://www.youtube.com/embed/sfaeD-50rMs?si=fwgHSionyo4lARn7"></iframe>
+                            <a class="open-new-tab" href="https://youtu.be/sfaeD-50rMs?feature=shared" target="_blank">Open in
+                                new tab</a>
+                            <p>Podcast 6: How To Control Your Anger - Seneca Podcast</p>
+                        </div>
+                        <!-- Add more podcast items -->
+                        <div class="carousel-item">
+                            <iframe src="https://www.youtube.com/embed/MFyEwdpC5pM?si=lTFI1cljIsaEPwWE" ></iframe>
+                            <a class="open-new-tab" href="https://youtu.be/MFyEwdpC5pM?feature=shared" target="_blank">Open in
+                                new tab</a>
+                            <p>Podcast 7:Dr. Samir Parikh Podcast</p>
+                        </div>
+                        <!-- Add more podcast items -->
+                        <div class="carousel-item">
+                            <iframe src="https://www.youtube.com/embed/GOqEl4ADyVk?si=jhVVuv99kNVgPwYA"></iframe>
+                            <a class="open-new-tab" href="https://youtu.be/GOqEl4ADyVk?feature=shared" target="_blank">Open in
+                                new tab</a>
+                            <p>Podcast 8: Jay Shetty Podcast</p>
+                        </div>
+                        <!-- Add more podcast items -->
+                        <div class="carousel-item">
+                            <iframe src="https://www.youtube.com/embed/NcaQUH2K-wo?si=HGN1ddsa0D9xDLfp"></iframe>
+                            <a class="open-new-tab" href="https://youtu.be/NcaQUH2K-wo?feature=shared" target="_blank">Open in
+                                new tab</a>
+                            <p>Podcast 9:Simon Sinek Podcast</p>
+                        </div>
+                        <!-- Add more podcast items -->
+                        <div class="carousel-item">
+                            <iframe src="https://www.youtube.com/embed/fN4w4UWVZUg?si=3W5SOc5QL2A1Obgq"></iframe>
+                            <a class="open-new-tab" href="https://youtu.be/fN4w4UWVZUg?feature=shared" target="_blank">Open in
+                                new tab</a>
+                            <p>Podcast 10: Doc Snipes Podcast</p>
+                        </div>
+        
+                        <!-- Add more podcasts here -->
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#podcastCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#podcastCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+            <div class="image-box">
+                <img src="mind.jpeg" alt="Mindfulness Image">
+            </div>
+        </div>
+    </div>
+
+    <!-- E-Books Section -->
+    <div class="container">
+        <div class="content-box">
+            <div class="image-box">
+                <img src="book.jpg" alt="Books Image">
+            </div>
+            <div class="section">
+                <h3>E-Books for a Peaceful Mind</h3>
+                <p class="quote">"Reading is a conversation with the best minds of past and present."</p>
+                <div id="ebookCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <!-- E-Book 1 -->
+                        <div class="carousel-item active">
+                            <iframe src="https://archive.org/embed/adventureofsherl0000unse" title="E-book 2"></iframe>
+                            <p>E-Book 1: The Rainbow Fish</p>
+                            <a class="open-new-tab" href="https://archive.org/embed/adventureofsherl0000unse"
+                                target="_blank">Open in new tab</a>
+                            <a href="https://archive.org/embed/adventureofsherl0000unse" download
+                                class="btn btn-primary mt-2">Download E-book</a>
+                        </div>
+        
+                        <!-- E-book 2 -->
+                        <div class="carousel-item">
+                            <iframe
+                            src="https://archive.org/embed/alchemist00coel"
+              
+                                title="E-book 2"></iframe>
+                            <p>E-Book 2: The Alchemist</p>
+                            <a class="open-new-tab" href="https://archive.org/embed/alchemist00coel"
+                                target="_blank">Open in new tab</a>
+                            <a href="https://archive.org/embed/alchemist00coel" download
+                                class="btn btn-primary mt-2">Download E-book</a>
+                        </div>
+                        <!-- E-book 3 -->
+                        <div class="carousel-item">
+                            <iframe 
+                            src="https://archive.org/embed/happinessproject00rubi"
+           
+                                title="E-book 2"></iframe>
+                            <p>E-Book 3: The Happiness Project</p>
+                            <a class="open-new-tab" href="https://archive.org/embed/happinessproject00rubi"
+                                target="_blank">Open in new tab</a>
+                            <a href="https://archive.org/embed/happinessproject00rubi" download
+                                class="btn btn-primary mt-2">Download E-book</a>
+                        </div>
+                        
+                        <!-- E-book 4 -->
+                        <div class="carousel-item">
+                            <iframe 
+                            src="https://archive.org/embed/atomichabitseasy0000clea"
+                         
+                                title="E-book 2"></iframe>
+                            <p>E-Book 4: The Happiness Project</p>
+                            <a class="open-new-tab" href="https://openlibrary.org/works/OL17930368W/Atomic_Habits"
+                                target="_blank">Open in new tab</a>
+                            <a href="https://openlibrary.org/works/OL17930368W/Atomic_Habits" download
+                                class="btn btn-primary mt-2">Download E-book</a>
+                        </div>
+                        
+                        <!-- E-book 5-->
+                        <div class="carousel-item">
+                            <iframe
+                           
+                            src="https://archive.org/embed/mindfulnessinpla00guna"
+                        
+                                title="E-book 2"></iframe>
+                            <p>E-Book 5: Mindfulness in plain English</p>
+                            <a class="open-new-tab" href="https://archive.org/embed/mindfulnessinpla00guna"
+                                target="_blank">Open in new tab</a>
+                            <a href="https://archive.org/embed/mindfulnessinpla00guna" download
+                                class="btn btn-primary mt-2">Download E-book</a>
+                        </div>
+                        
+                        <!-- E-book 6 -->
+                        <div class="carousel-item">
+                            <iframe 
+                            src="https://archive.org/embed/manssearchformea00fran_0"
+                           
+                                title="E-book 2"></iframe>
+                            <p>E-Book 6: Man's Search for Meaning</p>
+                            <a class="open-new-tab" href="https://archive.org/embed/manssearchformea00fran_0"
+                                target="_blank">Open in new tab</a>
+                            <a href="https://archive.org/embed/manssearchformea00fran_0" download
+                                class="btn btn-primary mt-2">Download E-book</a>
+                        </div>
+                        
+                        <!-- E-book 7 -->
+                        <div class="carousel-item">
+                            <iframe
+                            src="https://archive.org/embed/fouragreementspr00ruiz"
+                           
+                                title="E-book 2"></iframe>
+                            <p>E-Book 7: The Four Agreements</p>
+                            <a class="open-new-tab" href="https://archive.org/embed/fouragreementspr00ruiz"
+                                target="_blank">Open in new tab</a>
+                            <a href="https://archive.org/embed/fouragreementspr00ruiz" download
+                                class="btn btn-primary mt-2">Download E-book</a>
+                        </div>
+                        
+                        <!-- E-book 8 -->
+                        <div class="carousel-item">
+                            <iframe
+                            src="https://archive.org/embed/angermanagements00schi"
+                           
+                                title="E-book 2"></iframe>
+                            <p>E-Book 8: The Happiness Project</p>
+                            <a class="open-new-tab" href="https://archive.org/embed/angermanagements00schi"
+                           
+                                target="_blank">Open in new tab</a>
+                            <a href="https://archive.org/embed/angermanagements00schi"
+                            download
+                                class="btn btn-primary mt-2">Download E-book</a>
+                        </div>
+                        
+                        <!-- E-book 9 -->
+                        <div class="carousel-item">
+                            <iframe 
+                            src="https://archive.org/embed/lettinggoofshame0000pott"
+                          
+                                title="E-book 2"></iframe>
+                            <p>E-Book 9:Letting go of shame</p>
+                            <a class="open-new-tab" href="https://archive.org/embed/lettinggoofshame0000pott"
+                                target="_blank">Open in new tab</a>
+                            <a href="https://archive.org/embed/lettinggoofshame0000pott" download
+                                class="btn btn-primary mt-2">Download E-book</a>
+                        </div>
+                        
+                        <!-- E-book 10 -->
+                        <div class="carousel-item">
+                            <iframe 
+                            src="https://archive.org/embed/stumblingonhappi00gilb"
+                          
+                                title="E-book 2"></iframe>
+                            <p>E-Book 10:Stumbling on happiness</p>
+                            <a class="open-new-tab" href="https://archive.org/embed/stumblingonhappi00gilb"
+                                target="_blank">Open in new tab</a>
+                            <a href="https://archive.org/embed/stumblingonhappi00gilb" download
+                                class="btn btn-primary mt-2">Download E-book</a>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#ebookCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#ebookCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+            <div class="image-box">
+                <img src="reading.jpg" alt="Reading Image">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function scrollToContent() {
+            document.querySelector('.container').scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
