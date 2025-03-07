@@ -9,19 +9,22 @@
     <style>
         /* Background with a non vibrant gradient */
         body {
-            background: linear-gradient(135deg, #2a06f8 0%, #3e16dc 100%);
+            background: linear-gradient(135deg, #6494ed 0%, #123465 100%);
             color: #333;
-            font-family: Arial, sans-serif;
+            font-family: 'Times New Roman', Times, serif, sans-serif;
         }
 
         h2 {
             text-align: center;
-            margin-top: 20px;
-            font-size: 2.5rem;
+            margin-top: 50px;
+            margin-bottom: 50px;
+            animation: bounce 1s ease infinite;
+            
         }
+        
 
         .section {
-            background-color: rgb(254, 254, 254);
+            background-color: rgba(134, 180, 221, 0.799);
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             padding: 20px;
@@ -30,7 +33,7 @@
 
         /* Make iframes square */
         iframe {
-            width: 250px;
+            width: 550px;
             height: 250px;
             display: block;
             margin: 0 auto;
@@ -44,7 +47,7 @@
             display: inline-block;
             margin-top: 10px;
             text-decoration: underline;
-            color: #007bff;
+            color: #425568;
             text-align: center;
             cursor: pointer;
         }
@@ -57,11 +60,21 @@
             display: inline-block;
             margin-top: 10px;
         }
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(5); /* Normal position */
+            }
+            40% {
+                transform: translateY(-10px); /* Move up */
+            }
+            60% {
+                transform: translateY(-5px); /* Slightly less movement */
+            }
     </style>
 </head>
 <body>
     <div class="container">
-        <h2>Feeling Sad? Here's Some Content for You!</h2>
+        <h2>Lost in the Blues? Let a Good Vibe Guide You Back!</h2>
 
         <!-- Songs Section -->
         <div class="section">
@@ -80,6 +93,55 @@
                         <a class="open-new-tab" href="http://youtube.com/watch?v=p7_GDN6r2OY" target="_blank">Open in new tab</a>
                         <p>Song 2: Rajini Song</p>
                     </div>
+                    <!-- Add more song items -->
+                    <div class="carousel-item">
+                        <iframe src="https://www.youtube.com/embed/DHsYF8ihEKI?si=QbW7CKR4c2uqg3Hk"></iframe>
+                        <a class="open-new-tab" href="https://www.youtube.com/watch?v=DHsYF8ihEKI" target="_blank">Open in new tab</a>
+                        <p>Song 3: Motivational Song</p>
+                    </div>
+                    <!-- Add more song items -->
+                    <div class="carousel-item">
+                        <iframe src="https://www.youtube.com/embed/enxm-im6OyE?si=p7fYM7C8ftBHQwtX"></iframe>
+                        <a class="open-new-tab" href="https://www.youtube.com/watch?v=enxm-im6OyE" target="_blank">Open in new tab</a>
+                        <p>Song 4: Munnoru Naalil </p>
+                    </div>
+                    <!-- Add more song items -->
+                    <div class="carousel-item">
+                        <iframe src="https://www.youtube.com/embed/Vt2CiopGsnM?si=Dp5VZq48sVaJ_XFe"></iframe>
+                        <a class="open-new-tab" href="https://www.youtube.com/watch?v=Vt2CiopGsnM" target="_blank">Open in new tab</a>
+                        <p>Song 5: Vidamuyarchi</p>
+                    </div>
+                    <!-- Add more song items -->
+                    <div class="carousel-item">
+                        <iframe src="https://www.youtube.com/embed/B6JYuA4pWD4?si=3z7ppqM3ZKSOH8fw"></iframe>
+                        <a class="open-new-tab" href="https://www.youtube.com/watch?v=B6JYuA4pWD4" target="_blank">Open in new tab</a>
+                        <p>Song 6: Atti Culture</p>
+                    </div>
+                    <!-- Add more song items -->
+                    <div class="carousel-item">
+                        <iframe src="https://www.youtube.com/embed/dG2MODM1SJY"></iframe>
+                        <a class="open-new-tab" href="https://www.youtube.com/watch?v=dG2MODM1SJY" target="_blank">Open in new tab</a>
+                        <p>Song 7: Olalai</p>
+                    </div>
+                    <!-- Add more song items -->
+                    <div class="carousel-item">
+                        <iframe src="https://www.youtube.com/embed/QqqIRl2u7E4?si=goUAutkwT5jpaHAj"></iframe>
+                        <a class="open-new-tab" href="http://youtube.com/watch?v=p7_GDN6r2OY" target="_blank">Open in new tab</a>
+                        <p>Song 8: Beat Song</p>
+                    </div>
+                    <!-- Add more song items -->
+                    <div class="carousel-item">
+                        <iframe src="https://www.youtube.com/embed/ZBn_sEfoUDU"></iframe>
+                        <a class="open-new-tab" href="https://www.youtube.com/watch?v=ZBn_sEfoUDU" target="_blank">Open in new tab</a>
+                        <p>Song 9: Poladha Boomi</p>
+                    </div>
+                    <!-- Add more song items -->
+                    <div class="carousel-item">
+                        <iframe src="https://www.youtube.com/embed/s4MvQWsEAs8?si=XwFo4ggiXa3gfsps"></iframe>
+                        <a class="open-new-tab" href="https://www.youtube.com/watch?v=s4MvQWsEAs8" target="_blank">Open in new tab</a>
+                        <p>Song 10: Indian 2</p>
+                    </div>
+                    
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#songCarousel" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -89,6 +151,7 @@
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Next</span>
                 </button>
+                
             </div>
         </div>
 
@@ -108,6 +171,54 @@
                         <a class="open-new-tab" href="https://www.youtube.com/watch?v=Tuw8hxrFBH8" target="_blank">Open in new tab</a>
                         <p>Video 2: Motivational Video by Steave Jobs</p>
                     </div>
+                    <!-- Add more video items -->
+                    <div class="carousel-item">
+                        <iframe src="https://www.youtube.com/embed/4YovORO8wq4?si=WO6_wlIFU8eTpq38" title="Video 2"></iframe>
+                        <a class="open-new-tab" href="https://www.youtube.com/watch?v=4YovORO8wq4" target="_blank">Open in new tab</a>
+                        <p>Video 3: Motivational Video Tamil</p>
+                    </div>
+                    <!-- Add more video items -->
+                    <div class="carousel-item">
+                        <iframe src="https://www.youtube.com/embed/wv2C_RQI1Hc?si=OxWqoEeWPpz3SU9C" title="Video 2"></iframe>
+                        <a class="open-new-tab" href="https://www.youtube.com/watch?v=wv2C_RQI1Hc" target="_blank">Open in new tab</a>
+                        <p>Video 4: Parveen Sultana</p>
+                    </div>
+                    <!-- Add more video items -->
+                    <div class="carousel-item">
+                        <iframe src="https://www.youtube.com/embed/sGvjGsbYq2A?si=Cd0jJynhTI-nFBXE" title="Video 2"></iframe>
+                        <a class="open-new-tab" href="https://www.youtube.com/watch?v=sGvjGsbYq2A" target="_blank">Open in new tab</a>
+                        <p>Video 5: Christianity </p>
+                    </div>
+                    <!-- Add more video items -->
+                    <div class="carousel-item">
+                        <iframe src="https://www.youtube.com/embed/62R2uxlvw94?si=cmDd6ibnQ0tC-2Y8" title="Video 2"></iframe>
+                        <a class="open-new-tab" href="https://youtu.be/62R2uxlvw94" target="_blank">Open in new tab</a>
+                        <p>Video 6: Study Motivation</p>
+                    </div>
+                    <!-- Add more video items -->
+                    <div class="carousel-item">
+                        <iframe src="https://www.youtube.com/embed/S3-v9J5f6g4?si=1zPooZIJKkNWd3CF" title="Video 2"></iframe>
+                        <a class="open-new-tab" href="https://youtu.be/S3-v9J5f6g4" target="_blank">Open in new tab</a>
+                        <p>Video 7: Madan Gowri</p>
+                    </div>
+                    <!-- Add more video items -->
+                    <div class="carousel-item">
+                        <iframe src="https://www.youtube.com/embed/t981tO_xO7c?si=75LMzi1DSwQUz2qX" title="Video 2"></iframe>
+                        <a class="open-new-tab" href="https://youtu.be/t981tO_xO7c?si=75LMzi1DSwQUz2qX" target="_blank">Open in new tab</a>
+                        <p>Video 8: IPS Speach</p>
+                    </div>
+                    <!-- Add more video items -->
+                    <div class="carousel-item">
+                        <iframe src="https://www.youtube.com/embed/8EprynXdNJk?si=8MLWrOy6oyTKmZOa" title="Video 2"></iframe>
+                        <a class="open-new-tab" href="https://youtu.be/8EprynXdNJk?si=8MLWrOy6oyTKmZOa" target="_blank">Open in new tab</a>
+                        <p>Video 9: Tamil Motivation</p>
+                    </div>
+                    <!-- Add more video items -->
+                    <div class="carousel-item">
+                        <iframe src="https://www.youtube.com/embed/WFw1jIrl2lg?si=LiHJv4_k3fHl1ixg" title="Video 2"></iframe>
+                        <a class="open-new-tab" href="https://www.youtube.com/watch?v=WFw1jIrl2lg" target="_blank">Open in new tab</a>
+                        <p>Video 10: Parveen Sultana Speach</p>
+                    </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#videoCarousel" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -120,7 +231,7 @@
             </div>
         </div>
 
-        !-- Podcasts Section -->
+        
         <div class="section">
             <h3>Podcasts</h3>
             <div id="podcastCarousel" class="carousel slide" data-bs-ride="carousel">
@@ -137,6 +248,54 @@
                         <iframe src="https://www.youtube.com/embed/V2UTUBlnU8A?si=X4NP89NQEoxwwT5M"></iframe>
                         <a class="open-new-tab" href="https://www.youtube.com/watch?v=V2UTUBlnU8A" target="_blank">Open in new tab</a>
                         <p>Podcast 2: Freakonomics Radio - The Future of Work</p>
+                    </div>
+                    <!-- Add more podcast items -->
+                    <div class="carousel-item">
+                        <iframe src="https://www.youtube.com/embed/V2UTUBlnU8A?si=X4NP89NQEoxwwT5M"></iframe>
+                        <a class="open-new-tab" href="https://youtu.be/6jZBkKmyVZo?si=ouVdlQs34vSAWZHJ" target="_blank">Open in new tab</a>
+                        <p>Podcast 3: SS Radio Podcast</p>
+                    </div>
+                    <!-- Add more podcast items -->
+                    <div class="carousel-item">
+                        <iframe src="https://www.youtube.com/embed/KjGG77al-z8?si=eYAYzobb_rhtYhIm"></iframe>
+                        <a class="open-new-tab" href="https://youtu.be/KjGG77al-z8?si=eYAYzobb_rhtYhIm" target="_blank">Open in new tab</a>
+                        <p>Podcast 4: SS Radio</p>
+                    </div>
+                    <!-- Add more podcast items -->
+                    <div class="carousel-item">
+                        <iframe src="https://www.youtube.com/embed/ZKEZ5DR3mVs?si=ueY4jhke5hQNrV3U"></iframe>
+                        <a class="open-new-tab" href="https://youtu.be/ZKEZ5DR3mVs?si=ueY4jhke5hQNrV3U" target="_blank">Open in new tab</a>
+                        <p>Podcast 5: SS Music</p>
+                    </div>
+                    <!-- Add more podcast items -->
+                    <div class="carousel-item">
+                        <iframe src="https://www.youtube.com/embed/6iK3GG-bCKU?si=d3PGzW5OKzurSVOd"></iframe>
+                        <a class="open-new-tab" href="https://youtu.be/6iK3GG-bCKU?si=IRQa8nVBD_9ra9Pg" target="_blank">Open in new tab</a>
+                        <p>Podcast 6: SS Music</p>
+                    </div>
+                    <!-- Add more podcast items -->
+                    <div class="carousel-item">
+                        <iframe src="https://www.youtube.com/embed/U2I9PWH4hU8?si=y8wqhhsKJP4kH-2i"></iframe>
+                        <a class="open-new-tab" href="https://youtu.be/U2I9PWH4hU8?si=y8wqhhsKJP4kH-2i" target="_blank">Open in new tab</a>
+                        <p>Podcast 7: SS Music</p>
+                    </div>
+                    <!-- Add more podcast items -->
+                    <div class="carousel-item">
+                        <iframe src="https://www.youtube.com/embed/wsVnVhoG8OA?si=6FnAUO_ZheMXvXQn"></iframe>
+                        <a class="open-new-tab" href="https://youtu.be/wsVnVhoG8OA?si=6FnAUO_ZheMXvXQn" target="_blank">Open in new tab</a>
+                        <p>Podcast 8: Impaulsive</p>
+                    </div>
+                    <!-- Add more podcast items -->
+                    <div class="carousel-item">
+                        <iframe src="https://www.youtube.com/embed/LYpGuRuar84?si=VUNMTvymbUTk0FxG"></iframe>
+                        <a class="open-new-tab" href="https://youtu.be/LYpGuRuar84?si=VUNMTvymbUTk0FxG" target="_blank">Open in new tab</a>
+                        <p>Podcast 9: Impaulsive</p>
+                    </div>
+                    <!-- Add more podcast items -->
+                    <div class="carousel-item">
+                        <iframe src="https://www.youtube.com/embed/mlcyAPNxj0c?si=qM6U0QC33TVNL2Cd"></iframe>
+                        <a class="open-new-tab" href="https://youtu.be/mlcyAPNxj0c?si=qM6U0QC33TVNL2Cd" target="_blank">Open in new tab</a>
+                        <p>Podcast 10: Impaulsive</p>
                     </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#podcastCarousel" data-bs-slide="prev">
@@ -157,19 +316,77 @@
                 <div class="carousel-inner">
                     <!-- E-book 1 -->
                     <div class="carousel-item active">
-                        <iframe src="https://archive.org/embed/adventureofsherl0000unse" title="E-book 2"></iframe>
-                        <p>E-Book 1: The Rainbow Fish</p>
-                        <a class="open-new-tab" href="https://archive.org/embed/adventureofsherl0000unse" target="_blank">Open in new tab</a>
-                        <a href="https://archive.org/embed/adventureofsherl0000unse" download class="btn btn-primary mt-2">Download E-book</a>
+                        <iframe src="https://archive.org/embed/bwb_P8-BNS-180" title="E-book 2"></iframe>
+                        <p>E-Book 1: The Sad</p>
+                        <a class="open-new-tab" href="https://archive.org/embed/bwb_P8-BNS-180" target="_blank">Open in new tab</a>
+                        <a href="https://archive.org/embed/bwb_P8-BNS-180" download class="btn btn-primary mt-2">Download E-book</a>
                     </div>
                     
                     <!-- E-book 2 -->
                     <div class="carousel-item">
-                        <iframe src="https://drive.google.com/file/d/1iUNx7fjV2FXpJgHjwa/view?usp=sharing" title="E-book 2"></iframe>
-                        <p>E-Book 2: The Happiness Project</p>
-                        <a class="open-new-tab" href="https://drive.google.com/file/d/1iUNx7fjV2FXpJgHjwa/view?usp=sharing" target="_blank">Open in new tab</a>
-                        <a href="https://drive.google.com/uc?export=download&id=1iUNx7fjV2FXpJgHjwa" download class="btn btn-primary mt-2">Download E-book</a>
+                        <iframe src="https://archive.org/embed/wrinkleintimeyea00made" title="E-book 2"></iframe>
+                        <p>E-Book 2: Wrinkle</p>
+                        <a class="open-new-tab" href="https://openlibrary.org/works/OL41495W/A_Wrinkle_in_Time?edition=key%3A/books/OL7520031M" target="_blank">Open in new tab</a>
+                        <a href="hhttps://openlibrary.org/works/OL41495W/A_Wrinkle_in_Time?edition=key%3A/books/OL7520031M" download class="btn btn-primary mt-2">Download E-book</a>
                     </div>
+                    <!-- E-book 3 -->
+                    <div class="carousel-item">
+                        <iframe src="https://archive.org/embed/myfriendissad0000will_q4g6" title="E-book 2"></iframe>
+                        <p>E-Book 3: Wrinkle in Library 1</p>
+                        <a class="open-new-tab" href="https://openlibrary.org/works/OL5759983W?edition=key%3A/books/OL37061953M" target="_blank">Open in new tab</a>
+                        <a href="https://openlibrary.org/works/OL5759983W?edition=key%3A/books/OL37061953M" download class="btn btn-primary mt-2">Download E-book</a>
+                    </div>
+                    <!-- E-book 4 -->
+                    <div class="carousel-item">
+                        <iframe src="https://archive.org/embed/wrinkleintime0000leng_e0q4" title="E-book 2"></iframe>
+                        <p>E-Book 4: Wrinkle in Library 2</p>
+                        <a class="open-new-tab" href="https://openlibrary.org/works/OL41495W/A_Wrinkle_in_Time?edition=key%3A/books/OL7520031M" target="_blank">Open in new tab</a>
+                        <a href="https://openlibrary.org/works/OL41495W/A_Wrinkle_in_Time?edition=key%3A/books/OL7520031M" download class="btn btn-primary mt-2">Download E-book</a>
+                    </div>
+                    <!-- E-book 5 -->
+                    <div class="carousel-item">
+                        <iframe src="https://archive.org/embed/wrinkleintime00leng_1" title="E-book 2"></iframe>
+                        <p>E-Book 5: Wrinkle in Library 3</p>
+                        <a class="open-new-tab" href="https://openlibrary.org/works/OL41495W/A_Wrinkle_in_Time?edition=key%3A/books/OL7520031M" target="_blank">Open in new tab</a>
+                        <a href="https://openlibrary.org/works/OL41495W/A_Wrinkle_in_Time?edition=key%3A/books/OL7520031M" download class="btn btn-primary mt-2">Download E-book</a>
+                    </div>
+                    <!-- E-book 6 -->
+                    <div class="carousel-item">
+                        <iframe src="https://archive.org/embed/cherryorchard0000chek_p3x0" title="E-book 2"></iframe>
+                        <p>E-Book 6</p>
+                        <a class="open-new-tab" href="https://openlibrary.org/works/OL55417W/%D0%92%D0%B8%D1%88%D0%BD%D0%B5%D0%B2%D1%8B%D0%B9_%D1%81%D0%B0%D0%B4?edition=key%3A/books/OL24804089M" target="_blank">Open in new tab</a>
+                        <a href="https://openlibrary.org/works/OL55417W/%D0%92%D0%B8%D1%88%D0%BD%D0%B5%D0%B2%D1%8B%D0%B9_%D1%81%D0%B0%D0%B4?edition=key%3A/books/OL24804089M" download class="btn btn-primary mt-2">Download E-book</a>
+                    </div>
+                    <!-- E-book 7 -->
+                    <div class="carousel-item">
+                        <iframe src="https://archive.org/embed/lacerisaiecomd00chekuoft" title="E-book 2"></iframe>
+                        <p>E-Book 7</p>
+                        <a class="open-new-tab" href="https://archive.org/details/lacerisaiecomd00chekuoft/mode/2up?ref=ol&view=theater" target="_blank">Open in new tab</a>
+                        <a href="https://archive.org/details/lacerisaiecomd00chekuoft/mode/2up?ref=ol&view=theater" download class="btn btn-primary mt-2">Download E-book</a>
+                    </div>
+                    <!-- E-book 8 -->
+                    <div class="carousel-item">
+                        <iframe src="https://archive.org/embed/sadgirls0000leav" title="E-book 2"></iframe>
+                        <p>E-Book 8: Sad Girls</p>
+                        <a class="open-new-tab" href="https://openlibrary.org/works/OL20056505W?edition=key%3A/books/OL27236516M" target="_blank">Open in new tab</a>
+                        <a href="https://openlibrary.org/works/OL20056505W?edition=key%3A/books/OL27236516M" download class="btn btn-primary mt-2">Download E-book</a>
+                    </div>
+                    <!-- E-book 9 -->
+                    <div class="carousel-item">
+                        <iframe src="https://archive.org/embed/manywaters0000leng" title="E-book 2"></iframe>
+                        <p>E-Book 9</p>
+                        <a class="open-new-tab" href="https://archive.org/embed/manywaters0000leng" target="_blank">Open in new tab</a>
+                        <a href="https://archive.org/embed/manywaters0000leng" download class="btn btn-primary mt-2">Download E-book</a>
+                    </div>
+                    <!-- E-book 10 -->
+                    <div class="carousel-item">
+                        <iframe src="https://archive.org/embed/swiftlytiltingp00leng" title="E-book 2"></iframe>
+                        <p>E-Book 10</p>
+                        <a class="open-new-tab" href="https://openlibrary.org/works/OL41492W?edition=key%3A/books/OL7523327M" target="_blank">Open in new tab</a>
+                        <a href="https://openlibrary.org/works/OL41492W?edition=key%3A/books/OL7523327M" download class="btn btn-primary mt-2">Download E-book</a>
+                    </div>
+                    
+                    
 
                     <!-- Add more e-book items here -->
                 </div>
