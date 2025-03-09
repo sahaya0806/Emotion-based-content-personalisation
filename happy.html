@@ -6,62 +6,247 @@
     <title>Happy Emotion Page</title>
     <!-- Bootstrap CSS for quick layout -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        /* Background with a vibrant gradient */
+        
         body {
-            background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
-            color: #333;
-            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg,  #f2ee0a 0%, #f8bb04 100%);  
+            background-image: url('joy.jpg');         
+            background-attachment: fixed; 
+            background-size: cover; 
+            background-position: center; 
+            background-repeat: no-repeat;  
+            color: #f0f0f0;
+            font-family: 'Fuzzy Bubbles', sans-serif;
+            overflow-x: hidden;
         }
+        .button-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* Creates a 2x2 grid */
+            gap: 30px;
+            position: absolute;
+            top: 25%;
+            left: 5%;
+        }
+
+        .info-box {    
+            align-items: center;
+            justify-content: center;
+            width: 450px;
+            height: 200px;
+            padding: 6px;
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: rgb(251, 251, 251);
+            background: rgb(25, 128, 247); /* <-- Transparent golden background */
+            backdrop-filter: blur(10px);
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(10, 149, 249, 0.632);
+            text-decoration: none;
+            transition: transform 0.3s, box-shadow 0.3s;
+}
+ 
+
+
+
+        .info-box:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2);
+        }
+            
+        
 
         h2 {
             text-align: center;
-            margin-top: 20px;
+            margin-top: 35px;
+            margin-bottom: 750px;
             font-size: 2.5rem;
+            color: #e1e1e1;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(10, 10, 10, 0.3);
+            animation: bounce 2s ease-out infinite; /* Applying bounce animation */
+            position: relative;
+            
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0); /* No movement at start, middle, and end */
+    }
+            40% {
+                transform: translateY(-15px); /* Bounces up */
+    }
+            60% {
+                transform: translateY(-8px); /* Bounces down a little */
+    }
+}
+        h3 {
+            font-weight: 600;
+            color: #f6f8fa;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #6B728E;
+            padding-bottom: 10px;
+            animation: fadeIn 1s ease-in;
+        }
+
+        h4 {
+            font-weight: 400;
+            color: #1079f1;
+            font-style: italic;
+            margin-bottom: 25px;
+            animation: slideIn 1.2s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            from { transform: translateX(-20px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
         }
 
         .section {
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            padding: 20px;
+            background: linear-gradient(135deg, #6d8ecb19 0%, #081e2270 100%);
+            border-radius: 30px;
+            box-shadow: 0 8px 16px rgba(51, 8, 243, 0.2);
+            padding: 30px;
             margin-bottom: 60px;
+            color: #f9d60d;
+            backdrop-filter: blur(4.5px);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
         }
 
-        /* Make iframes square */
+        .section:hover {
+            transform: scale(1.02 ); /* Slightly enlarges the element */
+            box-shadow: 0 12px 20px rgba(235, 210, 98, 0.689);
+            transition: transform 1s ease, box-shadow 1s ease;
+        }
+
+        
+
+        
+
+        /* Make iframes rounded and with shadow */
         iframe {
-            width: 250px;
+            width: 550px;
             height: 250px;
             display: block;
             margin: 0 auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(22, 22, 22, 0.392);
+            transition: transform 0.3s ease;
+        }
+
+        iframe:hover {
+            transform: scale(1.02);
         }
 
         .carousel-control-prev, .carousel-control-next {
-            color: #333;
+            width: 10%;
+            opacity: 0.7;
+        }
+
+        .carousel-control-prev-icon, .carousel-control-next-icon {
+            background-color: rgba(107, 114, 142, 0.7);
+            border-radius: 50%;
+            padding: 25px;
         }
 
         .open-new-tab {
             display: inline-block;
-            margin-top: 10px;
-            text-decoration: underline;
-            color: #007bff;
-            text-align: center;
-            cursor: pointer;
+            margin-top: 15px;
+            color: #c3c8e3;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+            padding: 5px 10px;
+        }
+
+        .open-new-tab:hover {
+            color: #ffffff;
+        }
+
+        
+
+        .open-new-tab:hover::after {
+            width: 100%;
         }
 
         .carousel-item {
             text-align: center;
+            padding: 20px 0;
+        }
+
+        .carousel-item p {
+            margin-top: 15px;
+            font-weight: 500;
+            color: #e1e1e1;
         }
 
         .btn {
             display: inline-block;
-            margin-top: 10px;
+            margin-top: 15px;
+            background-color: #6B728E;
+            border: none;
+            border-radius: 25px;
+            padding: 8px 20px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn:hover {
+            background-color: #50577A;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Container with animated glow effect */
+        
+
+        @keyframes glow {
+            0% { box-shadow: 0 0 30px 10px rgba(107, 114, 142, 0.3); }
+            100% { box-shadow: 0 0 30px 10px rgba(80, 87, 122, 0.6); }
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 12px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #404258;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #6B728E;
+            border-radius: 6px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #50577A;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h2>Feeling Happy? Here's Some Content for You!</h2>
+        <h2>"Floating in Joy? Sunshine Smiles Show the Path."</h2>
+        <div class="button-container">
+    <a href="#songCarousel" class="info-box">Feel the rhythm, feel the joy — let the good vibes play on.</a>
+    <a href="#videoCarousel" class="info-box">Feeling good? These videos will make it even better!</a>
+    <a href="#podcastCarousel" class="info-box">Tune into happiness — one podcast at a time!</a>
+    <a href="#ebookCarousel" class="info-box">Read, smile, repeat — happiness lives in these pages.</a>
+</div>
+
+        
+        
 
         <!-- Songs Section -->
         <div class="section">
@@ -70,16 +255,65 @@
                 <div class="carousel-inner">
                     <!-- Song 1 with iframe -->
                     <div class="carousel-item active">
-                        <iframe src="https://www.youtube.com/embed/nfH0pa0VSBI?si=uE3qVYNIDXTIyoEw" title="YouTube video player"></iframe>                        
-                        <a class="open-new-tab" href="https://www.youtube.com/watch?v=nfH0pa0VSBI" target="_blank">Open in new tab</a>
-                        <p>Song 1: Yelo Pullelo</p>
+                        <iframe src="https://www.youtube.com/embed/gSp-4Nrzkbw?si=AB15LxAFnU3HStJP"></iframe>
+                        <a class="open-new-tab" href="https://youtu.be/wCqudE0YyZY?si=2LGS_wr72HgQOZeB" target="_blank">Open in new tab</a>
+                        <p>Song 1: Pala Palakkura </p>
                     </div>
                     <!-- Add more song items -->
                     <div class="carousel-item">
-                        <iframe src="https://www.youtube.com/embed/rBBD7N7qkE8?si=okZYfWHdOMnPqVY7"></iframe>
-                        <a class="open-new-tab" href="https://www.youtube.com/watch?v=rBBD7N7qkE8" target="_blank">Open in new tab</a>
-                        <p>Song 2: Comali</p>
+                        <iframe src="https://www.youtube.com/embed/rUFmHMkA5Vk?si=K4lCFUv5syRp6_LS"></iframe>
+                        <a class="open-new-tab" href="https://youtu.be/rUFmHMkA5Vk?si=ZdqWga7SylXc7trn" target="_blank">Open in new tab</a>
+                        <p>Song 2: Oh Super Nova </p>
                     </div>
+                    <!-- Add more song items -->
+                    <div class="carousel-item">
+                        <iframe src="https://www.youtube.com/embed/L1MLc8GvSLQ?si=_IFOdkmAihwtHZG7"></iframe>
+                        <a class="open-new-tab" href="https://youtu.be/L1MLc8GvSLQ?si=OzLKcRHTYmUaMd67" target="_blank">Open in new tab</a>
+                        <p>Song 3: Kokkara Kokkarako </p>
+                    </div>
+                    <!-- Add more song items -->
+                    <div class="carousel-item">
+                        <iframe src="https://www.youtube.com/embed/nttuyaJkypU?si=yjdsr4qge--gNQmo"></iframe>
+                        <a class="open-new-tab" href="https://youtu.be/nttuyaJkypU?si=SJF4VMp4b95oGU9X" target="_blank">Open in new tab</a>
+                        <p>Song 4: Padichu Pathen </p>
+                    </div>
+                    <!-- Add more song items -->
+                    <div class="carousel-item">
+                        <iframe src="https://www.youtube.com/embed/qhg0Zaw3e8M?si=nH7K8DW1tm4CC9VY"></iframe>
+                        <a class="open-new-tab" href="https://youtu.be/qhg0Zaw3e8M?si=BWiyp6TeZr_Jm1DV" target="_blank">Open in new tab</a>
+                        <p>Song 5: Pooparikka Neeyum </p>
+                    </div>
+                    <!-- Add more song items -->
+                    <div class="carousel-item">
+                        <iframe src="https://www.youtube.com/embed/vg6fuN0oO2Y?si=ZgHVRD7CKR17K8SA"></iframe>
+                        <a class="open-new-tab" href="https://youtu.be/vg6fuN0oO2Y?si=P-pGfAaS_KnZ4H3E" target="_blank">Open in new tab</a>
+                        <p>Song 6: Adada Adada </p>
+                    </div>
+                    <!-- Add more song items -->
+                    <div class="carousel-item">
+                        <iframe src="https://www.youtube.com/embed/popEFbTpB2s?si=RSdmSTGKDmurLlvp"></iframe>
+                        <a class="open-new-tab" href="https://youtu.be/popEFbTpB2s?si=Bwp98qOg3TIMieII" target="_blank">Open in new tab</a>
+                        <p>Song 7: Jalsa Pannungada</p>
+                    </div>
+                    <!-- Add more song items -->
+                    <div class="carousel-item">
+                        <iframe src="https://www.youtube.com/embed/7CajfS_iVQM?si=I3xJruuVF2BXfeIK"></iframe>
+                        <a class="open-new-tab" href="https://youtu.be/7CajfS_iVQM?si=G7CKWc4V4X_xyajU" target="_blank">Open in new tab</a>
+                        <p>Song 8: Thaai Kelavi </p>
+                    </div>
+                    <!-- Add more song items -->
+                    <div class="carousel-item">
+                        <iframe src="https://www.youtube.com/embed/PhxfspwMdww?si=eMiHSqNREZR2pH-2"></iframe>
+                        <a class="open-new-tab" href="https://youtu.be/PhxfspwMdww?si=vEiaChUwtCHts5MF" target="_blank">Open in new tab</a>
+                        <p>Song 9: JollyO Gymkhana</p>
+                    </div>
+                    <!-- Add more song items -->
+                    <div class="carousel-item">
+                        <iframe src="https://www.youtube.com/embed/i1BqRYMFS08?si=tbR5Dx5vcJxu1KUJ"></iframe>
+                        <a class="open-new-tab" href="https://youtu.be/i1BqRYMFS08?si=XeOWjs8PA-AZzI9P" target="_blank">Open in new tab</a>
+                        <p>Song 10: Appadi Podu </p>
+                    </div>
+                    
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#songCarousel" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -89,6 +323,7 @@
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Next</span>
                 </button>
+                
             </div>
         </div>
 
@@ -98,15 +333,63 @@
             <div id="videoCarousel" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <iframe src="https://www.youtube.com/embed/6rs-NTpfDJg?si=4zKs7cSDv3Z6EqHD" title="Video 1"></iframe>
-                        <a class="open-new-tab" href="https://www.youtube.com/watch?v=6rs-NTpfDJg" target="_blank">Open in new tab</a>
-                        <p>Video 1: Kamal Comedies</p>
+                        <iframe src="https://www.youtube.com/embed/TaDuEyeUM9Y?si=QtJpk-50NhTf_TYd" title="Video 1"></iframe>
+                        <a class="open-new-tab" href="https://youtu.be/TaDuEyeUM9Y?si=8tKlXljXlt5uTV1A" target="_blank">Open in new tab</a>
+                        <p>Video 1: If Asians Actually Played Squid game</p>
                     </div>
                     <!-- Add more video items -->
                     <div class="carousel-item">
-                        <iframe src="https://www.youtube.com/embed/mEkZRVRk4iQ?si=0_3fs3yq6gsUYlcm" title="Video 2"></iframe>
-                        <a class="open-new-tab" href="https://www.youtube.com/watch?v=mEkZRVRk4iQ" target="_blank">Open in new tab</a>
-                        <p>Video 2: Vadivelu Comedies</p>
+                        <iframe src="https://www.youtube.com/embed/Z-9iyiuNaq4?si=QnEZdLK3W95fF9JX" title="Video 2"></iframe>
+                        <a class="open-new-tab" href="https://youtu.be/Z-9iyiuNaq4?si=UeRwRIoc33P4-eP4" target="_blank">Open in new tab</a>
+                        <p>Video 2: Politicians In India </p>
+                    </div>
+                    <!-- Add more video items -->
+                    <div class="carousel-item">
+                        <iframe src="https://www.youtube.com/embed/-fjcOppnbZI?si=XvgGwVgM3HN2inUY" title="Video 2"></iframe>
+                        <a class="open-new-tab" href="https://youtu.be/-fjcOppnbZI?si=PT-j-UDv1W-8gkXJ" target="_blank">Open in new tab</a>
+                        <p>Video 3: Types Of People At The Gym</p>
+                    </div>
+                    <!-- Add more video items -->
+                    <div class="carousel-item">
+                        <iframe src="https://www.youtube.com/embed/oeWjRYKOI4w?si=nnAdAmAibCn-2PDh" title="Video 2"></iframe>
+                        <a class="open-new-tab" href="https://youtu.be/oeWjRYKOI4w?si=H05I0KZoOlGj2g0T" target="_blank">Open in new tab</a>
+                        <p>Video 4: Middle Class Mommy</p>
+                    </div>
+                    <!-- Add more video items -->
+                    <div class="carousel-item">
+                        <iframe src="https://www.youtube.com/embed/Pw6b0-Wi_FI?si=W0Se1KKhv7KMA-PH"" title="Video 2"></iframe>
+                        <a class="open-new-tab" href="https://youtu.be/Pw6b0-Wi_FI?si=psk-pXSlg8SefvOo" target="_blank">Open in new tab</a>
+                        <p>Video 5: I Ruined Skeppy’s Video</p>
+                    </div>
+                    <!-- Add more video items -->
+                    <div class="carousel-item">
+                        <iframe src="https://www.youtube.com/embed/8gnzTroz5YQ?si=M26JzdXFlHhgl9Zx" title="Video 2"></iframe>
+                        <a class="open-new-tab" href="https://youtu.be/8gnzTroz5YQ?si=hwqOH-zM45DVEftS" target="_blank">Open in new tab</a>
+                        <p>Video 6: Roblox Murder Mystery 2 In A Nutshell</p>
+                    </div>
+                    <!-- Add more video items -->
+                    <div class="carousel-item">
+                        <iframe src="https://www.youtube.com/embed/o9LMsBAhwkk?si=u5h07Ko7BLvvHfwX" title="Video 2"></iframe>
+                        <a class="open-new-tab" href="https://youtu.be/o9LMsBAhwkk?si=69zFL_SkUFS7ZmgB" target="_blank">Open in new tab</a>
+                        <p>Video 7: Kaavalan -Back-to-Back Comedy Scenes</p>
+                    </div>
+                    <!-- Add more video items -->
+                    <div class="carousel-item">
+                        <iframe src="https://www.youtube.com/embed/mW0V7qBVL_k?si=-C5jYslCGorG0SrS" title="Video 2"></iframe>
+                        <a class="open-new-tab" href="https://youtu.be/mW0V7qBVL_k?si=8xniDpGrIL1q2llL" target="_blank">Open in new tab</a>
+                        <p>Video 8: Theri Movie Back to Back Comedy Scene</p>
+                    </div>
+                    <!-- Add more video items -->
+                    <div class="carousel-item">
+                        <iframe src="https://www.youtube.com/embed/xMI4QLgIXDE?si=mtINPST-PzItp7Ze" title="Video 2"></iframe>
+                        <a class="open-new-tab" href="https://youtu.be/xMI4QLgIXDE?si=G72GF3nJEO9-MFco target="_blank">Open in new tab</a>
+                        <p>Video 9: Kalakalappu - Back to Back Comedy Scenes</p>
+                    </div>
+                    <!-- Add more video items -->
+                    <div class="carousel-item">
+                        <iframe src="https://www.youtube.com/embed/mahBfDRlJFI?si=dX58MKfNYUD3TJVO" title="Video 2"></iframe>
+                        <a class="open-new-tab" href="https://youtu.be/mahBfDRlJFI?si=OuvRz7vs2nh4SQpd" target="_blank">Open in new tab</a>
+                        <p>Video 10: Savage Kids</p>
                     </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#videoCarousel" data-bs-slide="prev">
@@ -120,23 +403,71 @@
             </div>
         </div>
 
-        !-- Podcasts Section -->
+        
         <div class="section">
             <h3>Podcasts</h3>
             <div id="podcastCarousel" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <iframe src="https://www.youtube.com/embed/w-lgnc7Nw1U?si=MG1EkudNDGXsim_S"></iframe>
-                        <a class="open-new-tab" href="https://www.youtube.com/watch?v=w-lgnc7Nw1U" target="_blank">Open in new tab</a>
-                        <p>Podcast 1: TFries with Potato</p>
+                        <iframe src="https://www.youtube.com/embed/LAmGfokvgzA?si=UKUnPlaZuPB71zmP"></iframe>
+                        <a class="open-new-tab" href="https://youtu.be/LAmGfokvgzA?si=Vve5uY0VIf5dNKYC" target="_blank">Open in new tab</a>
+                        <p>Podcast 1: KEVIN HART ON: The SECRET To Success & Happiness NOBODY TALKS ABOUT (Do This In 2023) </p>
                     </div>
 
 
                     <!-- Add more podcast items -->
                     <div class="carousel-item">
-                        <iframe src="https://www.youtube.com/embed/APpkzz9FR_0?si=kXCi6iRsTULrhtge"></iframe>
-                        <a class="open-new-tab" href="https://www.youtube.com/watch?v=APpkzz9FR_0" target="_blank">Open in new tab</a>
-                        <p>Podcast 2: Fries with Potato</p>
+                        <iframe src="https://www.youtube.com/embed/mdb3anMJRX8?si=EE0Gd1rQd-EhmzSb"></iframe>
+                        <a class="open-new-tab" href="https://youtu.be/mdb3anMJRX8?si=spqD1MWHUyfc_34d" target="_blank">Open in new tab</a>
+                        <p>Podcast 2: Want to Be Happier Right Now? Don’t Make This Mistake</p>
+                    </div>
+                    <!-- Add more podcast items -->
+                    <div class="carousel-item">
+                        <iframe src="https://www.youtube.com/embed/gYeHV_nA36c?si=FKqmLEH9exg8WfNn"></iframe>
+                        <a class="open-new-tab" href="https://youtu.be/gYeHV_nA36c?si=36hxWyqn9XaYdvxq" target="_blank">Open in new tab</a>
+                        <p>Podcast 3: The Simple Secret of Being Happier</p>
+                    </div>
+                    <!-- Add more podcast items -->
+                    <div class="carousel-item">
+                        <iframe src="https://www.youtube.com/embed/csA9YhzYvmk?si=HJcb0BiiYG09IZf"></iframe>
+                        <a class="open-new-tab" href="https://youtu.be/csA9YhzYvmk?si=n580sla_hCo12Dun" target="_blank">Open in new tab</a>
+                        <p>Podcast 4: The Happiness Expert That Made 51 Million People Happier: Mo Gawdat | E101</p>
+                    </div>
+                    <!-- Add more podcast items -->
+                    <div class="carousel-item">
+                        <iframe src="https://www.youtube.com/embed/An-SOWjbDsI?si=y3-NLSD__auFjC-s"></iframe>
+                        <a class="open-new-tab" href="https://youtu.be/An-SOWjbDsI?si=QLStBT-gbdSVRhUe" target="_blank">Open in new tab</a>
+                        <p>Podcast 5: How To Be Happy</p>
+                    </div>
+                    <!-- Add more podcast items -->
+                    <div class="carousel-item">
+                        <iframe src="https://www.youtube.com/embed/GYWer1xikZw?si=8_d69lBNqjCDMh17"></iframe>
+                        <a class="open-new-tab" href="https://youtu.be/GYWer1xikZw?si=wlIQIMcwWRCEag6u" target="_blank">Open in new tab</a>
+                        <p>Podcast 6: 10 Buddhist Tips for a Happier You !! | ep: 376 </p>
+                    </div>
+                    <!-- Add more podcast items -->
+                    <div class="carousel-item">
+                        <iframe src="https://www.youtube.com/embed/RclNgTqsdxs?si=FMzOjaGF7zrMmZqQ"></iframe>
+                        <a class="open-new-tab" href="https://youtu.be/RclNgTqsdxs?si=BB9sJUe3XT2nDu-N" target="_blank">Open in new tab</a>
+                        <p>Podcast 7: IKIGAI - A Japanese Secret to a Long & Happy Life</p>
+                    </div>
+                    <!-- Add more podcast items -->
+                    <div class="carousel-item">
+                        <iframe src="https://www.youtube.com/embed/B21aOt8OljA?si=a0GkbH9Rz5ZyLvkl"></iframe>
+                        <a class="open-new-tab" href="https://youtu.be/B21aOt8OljA?si=02IdoEEhSCXz6QBa" target="_blank">Open in new tab</a>
+                        <p>Podcast 8: Make your own happiness pill </p>
+                    </div>
+                    <!-- Add more podcast items -->
+                    <div class="carousel-item">
+                        <iframe src="https://www.youtube.com/embed/cqRskFuKeM8?si=KlRggnKpGxrvNvOm"></iframe>
+                        <a class="open-new-tab" href="https://youtu.be/cqRskFuKeM8?si=hw6E6v23uHmbMyCW" target="_blank">Open in new tab</a>
+                        <p>Podcast 9: Middle Class and Rented House</p>
+                    </div>
+                    <!-- Add more podcast items -->
+                    <div class="carousel-item">
+                        <iframe src="https://www.youtube.com/embed/z6UV-4_FGN8?si=jyrFw51FuEAeaaK8"></iframe>
+                        <a class="open-new-tab" href="https://youtu.be/z6UV-4_FGN8?si=yh6fKjS_rQ9fIl8I" target="_blank">Open in new tab</a>
+                        <p>Podcast 10: Kam Patterson & The Notes of White Rice | TigerBelly 469</p>
                     </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#podcastCarousel" data-bs-slide="prev">
@@ -157,19 +488,79 @@
                 <div class="carousel-inner">
                     <!-- E-book 1 -->
                     <div class="carousel-item active">
-                        <iframe src="https://archive.org/embed/adventureofsherl0000unse" title="E-book 2"></iframe>
-                        <p>E-Book 1: The Rainbow Fish</p>
-                        <a class="open-new-tab" href="https://archive.org/embed/adventureofsherl0000unse" target="_blank">Open in new tab</a>
-                        <a href="https://archive.org/embed/adventureofsherl0000unse" download class="btn btn-primary mt-2">Download E-book</a>
+                        <iframe src="https://archive.org/embed/utopiaorhappyrep1743more" title="E-book 2"></iframe>
+                        <p>E-Book 1: Utopia</p>
+                        <a class="open-new-tab" href="https://openlibrary.org/works/OL15366912W/Utopia?edition=key%3A/books/OL16598081M" target="_blank">Open in new tab</a>
+                        <a href="https://ia800200.us.archive.org/3/items/utopiaorhappyrep1743more/utopiaorhappyrep1743more.pdf" download class="btn btn-primary mt-2">Download E-book</a>
                     </div>
                     
                     <!-- E-book 2 -->
                     <div class="carousel-item">
-                        <iframe src="https://drive.google.com/file/d/1iUNx7fjV2FXpJgHjwa/view?usp=sharing" title="E-book 2"></iframe>
-                        <p>E-Book 2: The Happiness Project</p>
-                        <a class="open-new-tab" href="https://drive.google.com/file/d/1iUNx7fjV2FXpJgHjwa/view?usp=sharing" target="_blank">Open in new tab</a>
-                        <a href="https://drive.google.com/uc?export=download&id=1iUNx7fjV2FXpJgHjwa" download class="btn btn-primary mt-2">Download E-book</a>
+                        <iframe src="https://archive.org/embed/happyprince00wild" title="E-book 2"></iframe>
+                        <p>E-Book 2: The Happy Prince and Other Fairy Tales</p>
+                        <a class="open-new-tab" href="https://openlibrary.org/works/OL14877874W/The_Happy_Prince_and_other_tales?edition=key%3A/books/OL14010917M" target="_blank">Open in new tab</a>
+                        <a href="https://ia804605.us.archive.org/16/items/happyprince00wild/happyprince00wild.pdf" download class="btn btn-primary mt-2">Download E-book</a>
                     </div>
+                    <!-- E-book 3 -->
+                    <div class="carousel-item">
+                        <iframe src="
+                        https://archive.org/embed/anneofgreengable0000unse_p0z0"></iframe>
+                        </iframe>" title="E-book 2"></iframe>
+                        <p>E-Book 3: Anne of Green Gables</p>
+                        <a class="open-new-tab" href="https://openlibrary.org/works/OL77746W/Anne_of_Green_Gables?edition=key%3A/books/OL49814359M" target="_blank">Open in new tab</a>
+                        <a href="https://ia800209.us.archive.org/16/items/anneofgreengable0000unse_p0z0/anneofgreengable0000unse_p0z0.pdf" download class="btn btn-primary mt-2">Download E-book</a>
+                    </div>
+                    <!-- E-book 4 -->
+                    <div class="carousel-item">
+                        <iframe src="https://archive.org/embed/littlewomen0000alco_t3z5"></iframe>" title="E-book 2"></iframe>
+                        <p>E-Book 4: Little women/p>
+                        <a class="open-new-tab" href="https://openlibrary.org/works/OL29983W/Little_Women?edition=key%3A/books/OL21516677M" target="_blank">Open in new tab</a>
+                        <a href="https://ia903408.us.archive.org/14/items/littlewomen0000alco_t3z5/littlewomen0000alco_t3z5.pdf" download class="btn btn-primary mt-2">Download E-book</a>
+                    </div>
+                    <!-- E-book 5 -->
+                    <div class="carousel-item">
+                        <iframe src="https://archive.org/embed/pollyannaporter"></iframe>" title="E-book 2"></iframe>
+                        <p>E-Book 5: POLLYANNA</p>
+                        <a class="open-new-tab" href="https://openlibrary.org/works/OL2775807W/Pollyanna?edition=key%3A/books/OL25265941M" target="_blank">Open in new tab</a>
+                        <a href="https://ia601308.us.archive.org/5/items/pollyannaporter/pollyannaporter.pdf" download class="btn btn-primary mt-2">Download E-book</a>
+                    </div>
+                    <!-- E-book 6 -->
+                    <div class="carousel-item">
+                        <iframe src="https://archive.org/embed/cherryorchard0000chek_p3x0" title="E-book 2"></iframe>
+                        <p>E-Book 6: The Cherry Orchard</p>
+                        <a class="open-new-tab" href="https://openlibrary.org/works/OL55417W/%D0%92%D0%B8%D1%88%D0%BD%D0%B5%D0%B2%D1%8B%D0%B9_%D1%81%D0%B0%D0%B4?edition=key%3A/books/OL24804089M" target="_blank">Open in new tab</a>
+                        <a href="https://openlibrary.org/works/OL55417W/%D0%92%D0%B8%D1%88%D0%BD%D0%B5%D0%B2%D1%8B%D0%B9_%D1%81%D0%B0%D0%B4?edition=key%3A/books/OL24804089M" download class="btn btn-primary mt-2">Download E-book</a>
+                    </div>
+                    <!-- E-book 7 -->
+                    <div class="carousel-item">
+                        <iframe src="https://archive.org/embed/shrewtamingof00shakrich"></iframe>" title="E-book 2"></iframe>
+                        <p>E-Book 7: The taming of the shrew</p>
+                        <a class="open-new-tab" href="https://openlibrary.org/works/OL362690W/The_Taming_of_the_Shrew?edition=key%3A/books/OL7147967M" target="_blank">Open in new tab</a>
+                        <a href="https://ia902809.us.archive.org/31/items/shrewtamingof00shakrich/shrewtamingof00shakrich.pdf" download class="btn btn-primary mt-2">Download E-book</a>
+                    </div>
+                    <!-- E-book 8 -->
+                    <div class="carousel-item">
+                        <iframe src="https://archive.org/embed/firm0000gris_j5g3"></iframe>" title="E-book 2"></iframe>
+                        <p>E-Book 8: A Time to Kill</p>
+                        <a class="open-new-tab" href="https://openlibrary.org/works/OL77001W/A_Time_to_Kill?edition=key%3A/books/OL37044287M" target="_blank">Open in new tab</a>
+                        <a href="https://openlibrary.org/works/OL77001W/A_Time_to_Kill?edition=key%3A/books/OL37044287M" download class="btn btn-primary mt-2">Download E-book</a>
+                    </div>
+                    <!-- E-book 9 -->
+                    <div class="carousel-item">
+                        <iframe src="https://archive.org/embed/poetspub0000link"></iframe>" title="E-book 2"></iframe>
+                        <p>E-Book 9: Poet's Pub</p>
+                        <a class="open-new-tab" href="https://openlibrary.org/works/OL17949408W/Poet%27s_pub?edition=key%3A/books/OL33024111M" target="_blank">Open in new tab</a>
+                        <a href="https://openlibrary.org/works/OL17949408W/Poet%27s_pub?edition=key%3A/books/OL33024111M download class="btn btn-primary mt-2">Download E-book</a>
+                    </div>
+                    <!-- E-book 10 -->
+                    <div class="carousel-item">
+                        <iframe src="https://archive.org/embed/atightcornerafa00sweagoog"></iframe>" title="E-book 2"></iframe>
+                        <p>E-Book 10: A tight corner</p>
+                        <a class="open-new-tab" href="https://openlibrary.org/works/OL7604629W/A_tight_corner?edition=key%3A/books/OL6581028M" target="_blank">Open in new tab</a>
+                        <a href="https://ia601302.us.archive.org/32/items/atightcornerafa00sweagoog/atightcornerafa00sweagoog.pdf" download class="btn btn-primary mt-2">Download E-book</a>
+                    </div>
+                    
+                    
 
                     <!-- Add more e-book items here -->
                 </div>
