@@ -7,26 +7,63 @@
     <!-- Bootstrap CSS for quick layout -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        /* Enhanced styling with Ennui theme */
+        
         body {
             background: linear-gradient(135deg, #27074e 0%, #090907 100%);
+            background-image: url(Neutral1.jpg);      
+            background-attachment: fixed; 
+            background-size: cover; 
+            background-position: center; 
+            background-repeat: no-repeat;  
             color: #f0f0f0;
             font-family: 'Quicksand', sans-serif;
             overflow-x: hidden;
         }
+        .button-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* Creates a 2x2 grid */
+            gap: 30px;
+            position: absolute;
+            top: 25%;
+            left: 5%;
+        }
 
+        .info-box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 450px;
+            height: 200px;
+            padding: 6px;
+            text-align: center;
+            font-size: 1rem;
+            font-weight: bold;
+            color: rgb(237, 235, 249);
+            background: #210638;
+            backdrop-filter: blur(10px);
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(41, 5, 58, 0.632);
+            text-decoration: none;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .info-box:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2);
+        }
+            
+        
 
         h2 {
             text-align: center;
-            margin-top: 30px;
-            margin-bottom: 30px;
+            margin-top: 35px;
+            margin-bottom: 750px;
             font-size: 2.5rem;
             color: #e1e1e1;
             font-weight: 700;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-            animation: bounce 2s infinite; /* Applying bounce animation */
+            animation: bounce 2s ease-out infinite; /* Applying bounce animation */
             position: relative;
             
         }
@@ -36,15 +73,15 @@
                 transform: translateY(0); /* No movement at start, middle, and end */
     }
             40% {
-                transform: translateY(-30px); /* Bounces up */
+                transform: translateY(-15px); /* Bounces up */
     }
             60% {
-                transform: translateY(-15px); /* Bounces down a little */
+                transform: translateY(-8px); /* Bounces down a little */
     }
 }
         h3 {
             font-weight: 600;
-            color: #faf9f6;
+            color: #f6f8fa;
             margin-bottom: 20px;
             border-bottom: 2px solid #6B728E;
             padding-bottom: 10px;
@@ -71,37 +108,26 @@
 
         .section {
             background: linear-gradient(135deg, #27074e 0%, #090907 100%);
-            border-radius: 15px;
+            border-radius: 30px;
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
             padding: 30px;
             margin-bottom: 60px;
             color: #f0f0f0;
-            backdrop-filter: blur(5px);
+            backdrop-filter: blur(4.5px);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             position: relative;
             overflow: hidden;
         }
 
         .section:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+            transform: scale(1.02 ); /* Slightly enlarges the element */
+            box-shadow: 0 12px 20px  rgba(0, 0, 0, 0.3);
+            transition: transform 1s ease, box-shadow 1s ease;
         }
 
-        /* Ennui character silhouette in the background of each section */
-        .section::before {
-            content: '';
-            position: absolute;
-            right: -50px;
-            bottom: -50px;
-            width: 300px;
-            height: 400px;
-            background-image: url('https://images.hdqwalls.com/download/ennui-in-inside-out-2-movie-2024-lp-3000x2000.jpg');
-            background-size: contain;
-            background-repeat: no-repeat;
-            opacity: 0.50;
-            transform: rotate(10deg);
-            z-index: 0;
-        }
+        
+
+        
 
         /* Make iframes rounded and with shadow */
         iframe {
@@ -110,12 +136,12 @@
             display: block;
             margin: 0 auto;
             border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 12px  rgba(0, 0, 0, 0.2);
             transition: transform 0.3s ease;
         }
 
         iframe:hover {
-            transform: scale(1.02);
+            transform: scale(1.05);
         }
 
         .carousel-control-prev, .carousel-control-next {
@@ -144,16 +170,7 @@
             color: #ffffff;
         }
 
-        .open-new-tab::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: 0;
-            left: 0;
-            background-color: #ffffff;
-            transition: width 0.3s ease;
-        }
+        
 
         .open-new-tab:hover::after {
             width: 100%;
@@ -189,25 +206,7 @@
         }
 
         /* Container with animated glow effect */
-        .container {
-            position: relative;
-            padding: 20px;
-            margin-top: 20px;
-            margin-bottom: 50px;
-        }
-
-        .container::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border-radius: 20px;
-            box-shadow: 0 0 30px 10px rgba(107, 114, 142, 0.3);
-            animation: glow 4s infinite alternate;
-            z-index: -1;
-        }
+        
 
         @keyframes glow {
             0% { box-shadow: 0 0 30px 10px rgba(107, 114, 142, 0.3); }
@@ -231,17 +230,30 @@
         ::-webkit-scrollbar-thumb:hover {
             background: #50577A;
         }
+       
+
+
+
     </style>
 </head>
 <body>
     <div class="container">
         <h2><b>"Not too high, not too low? Perfect! Let's chill with some calm yet engaging content just for you."</b></h2>
+        <div class="button-container">
+    <a href="#songCarousel" class="info-box">" SONGS" Feeling that neutral vibe? How about some tunes that flow with your mood—nothing too loud, nothing too soft, just the right rhythm for your middle ground..!</a>
+    <a href="#videoCarousel" class="info-box">" VIDEOS" In the mood for something that's neither too dramatic nor too dull? We've got videos that ride the perfect wave between boredom and excitement—just for you!</a>
+    <a href="#podcastCarousel" class="info-box">" PODCAST" Need something to tune into without tipping the emotional scales? These podcasts offer the right balance of thought-provoking and laid-back—ideal for your neutral mood.</a>
+    <a href="#ebookCarousel" class="info-box">" E-BOOKS" Neutral moods call for quiet exploration. Grab an e-book that doesn't push any buttons but keeps you hooked in a steady, thoughtful flow."</a>
+    
+    </div>
+    
+
+        
+        
 
         <!-- Songs Section -->
         <div class="section">
-            
             <h3>Songs</h3>
-            <h4>"Feeling that neutral vibe? How about some tunes that flow with your mood—nothing too loud, nothing too soft, just the right rhythm for your middle ground..!"</h4>
             <div id="songCarousel" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <!-- Song 1 with iframe -->
@@ -309,10 +321,7 @@
 
         <!-- Videos Section -->
         <div class="section">
-            
-
             <h3>Videos</h3>
-            <h4>"In the mood for something that's neither too dramatic nor too dull? We've got videos that ride the perfect wave between boredom and excitement—just for you!"</h4>
             <div id="videoCarousel" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
@@ -357,56 +366,48 @@
                 </button>
             </div>
         </div>
-
-        <!-- Podcasts Section -->
+        
         <div class="section">
-            
-
             <h3>Podcasts</h3>
-            <h4>"Need something to tune into without tipping the emotional scales? These podcasts offer the right balance of thought-provoking and laid-back—ideal for your neutral mood."</h4>
             <div id="podcastCarousel" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <iframe src="https://www.youtube.com/embed/M7fpQhFeJv8?si=rnfQc3hAozQCQZ3C"></iframe>
-                        <a class="open-new-tab" href="https://youtu.be/M7fpQhFeJv8?si=FOsHXn_e49IVO55d" target="_blank">Open in new tab</a>
-                        <p>HOW DO WE STOP OVERTHINKING</p>
-                    </div>
-
-
-                    <!-- Add more podcast items -->
-                    <div class="carousel-item">
-                        <iframe src="https://www.youtube.com/embed/rKpltaOMFdc?si=RcdsNmVSCMiID8bW"></iframe>
-                        <a class="open-new-tab" href="https://youtu.be/rKpltaOMFdc?si=M74NLhUSnWB3_3H4" target="_blank">Open in new tab</a>
-                        <p>CONFIDENCE ISNT LOUD , HERE'S HOW TO FIND YOUR VOICE</p>
-                    </div>
-                    <div class="carousel-item">
-                        <iframe src="https://www.youtube.com/embed/NcaQUH2K-wo?si=QgGgs2fZUuAwM7za"></iframe>
-                        <a class="open-new-tab" href="https://youtu.be/NcaQUH2K-wo?si=-fScFdzT8I8BsueJ" target="_blank">Open in new tab</a>
-                        <p>THE PROBLEM WITH GEN-Z</p>
-                    </div>
-                    <div class="carousel-item">
-                        <iframe src="https://www.youtube.com/embed/0SPC_Q7-k40?si=Ji9nRG_ZC0Ba77RQ"></iframe>
-                        <a class="open-new-tab" href="https://youtu.be/0SPC_Q7-k40?si=qx3vHXW5EMzfvdh1" target="_blank">Open in new tab</a>
-                        <p>YOU CAN CHANGE YOUR BRAIN</p>
-                    </div>
+                <div class="carousel-item active">
+                    <iframe src="https://www.youtube.com/embed/M7fpQhFeJv8?si=rnfQc3hAozQCQZ3C"></iframe>
+                    <a class="open-new-tab" href="https://youtu.be/M7fpQhFeJv8?si=FOsHXn_e49IVO55d" target="_blank">Open in new tab</a>
+                    <p>HOW DO WE STOP OVERTHINKING</p>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#podcastCarousel" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#podcastCarousel" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
+
+
+                <!-- Add more podcast items -->
+                <div class="carousel-item">
+                    <iframe src="https://www.youtube.com/embed/rKpltaOMFdc?si=RcdsNmVSCMiID8bW"></iframe>
+                    <a class="open-new-tab" href="https://youtu.be/rKpltaOMFdc?si=M74NLhUSnWB3_3H4" target="_blank">Open in new tab</a>
+                    <p>CONFIDENCE ISNT LOUD , HERE'S HOW TO FIND YOUR VOICE</p>
+                </div>
+                <div class="carousel-item">
+                    <iframe src="https://www.youtube.com/embed/NcaQUH2K-wo?si=QgGgs2fZUuAwM7za"></iframe>
+                    <a class="open-new-tab" href="https://youtu.be/NcaQUH2K-wo?si=-fScFdzT8I8BsueJ" target="_blank">Open in new tab</a>
+                    <p>THE PROBLEM WITH GEN-Z</p>
+                </div>
+                <div class="carousel-item">
+                    <iframe src="https://www.youtube.com/embed/0SPC_Q7-k40?si=Ji9nRG_ZC0Ba77RQ"></iframe>
+                    <a class="open-new-tab" href="https://youtu.be/0SPC_Q7-k40?si=qx3vHXW5EMzfvdh1" target="_blank">Open in new tab</a>
+                    <p>YOU CAN CHANGE YOUR BRAIN</p>
+                </div>
             </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#podcastCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#podcastCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>
+    </div>
 
         <!-- E-books Section -->
         <div class="section">
-            
-
             <h3>E-Books</h3>
-            <h4>"Neutral moods call for quiet exploration. Grab an e-book that doesn't push any buttons but keeps you hooked in a steady, thoughtful flow."</h4>
             <div id="ebookCarousel" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <!-- E-book 1 -->
@@ -459,27 +460,9 @@
         </div>
     </div>
 
+
     <!-- Bootstrap JS and dependencies -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
-    <script>
-        // Add animation classes on scroll
-        document.addEventListener('DOMContentLoaded', function() {
-            // Delay the appearance of each section
-            const sections = document.querySelectorAll('.section');
-            sections.forEach((section, index) => {
-                section.style.opacity = '0';
-                section.style.transform = 'translateY(20px)';
-                section.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-                
-                setTimeout(() => {
-                    section.style.opacity = '1';
-                    section.style.transform = 'translateY(0)';
-                }, 300 * (index + 1));
-            });
-        });
-    </script>
-    
-    <!-- Additional JavaScript for animations -->
 </body>
 </html>
